@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
   devise_for :developers
+
+  root :to => "home#index"
+
+  resources :evaluations do
+    resources :mappings
+    get "map", on: :member
+  end
+  resources :materials
+  resources :results
+  
+  resources :companies do
+    resources :departments
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

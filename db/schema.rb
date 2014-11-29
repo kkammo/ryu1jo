@@ -17,14 +17,16 @@ ActiveRecord::Schema.define(version: 20141129004858) do
   enable_extension "plpgsql"
 
   create_table "applieds", force: true do |t|
-    t.integer  "RateeGroup_id"
-    t.integer  "Developer_id"
+    t.integer  "ratee_group_id"
+    t.integer  "developer_id",   null: false
+    t.integer  "evaluation_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "applieds", ["Developer_id"], name: "index_applieds_on_Developer_id", using: :btree
-  add_index "applieds", ["RateeGroup_id"], name: "index_applieds_on_RateeGroup_id", using: :btree
+  add_index "applieds", ["developer_id"], name: "index_applieds_on_developer_id", using: :btree
+  add_index "applieds", ["evaluation_id"], name: "index_applieds_on_evaluation_id", using: :btree
+  add_index "applieds", ["ratee_group_id"], name: "index_applieds_on_ratee_group_id", using: :btree
 
   create_table "companies", primary_key: "name", force: true do |t|
   end
@@ -63,20 +65,22 @@ ActiveRecord::Schema.define(version: 20141129004858) do
   add_index "developers", ["reset_password_token"], name: "index_developers_on_reset_password_token", unique: true, using: :btree
 
   create_table "evaluations", force: true do |t|
+    t.boolean  "appliable",  default: true
+    t.boolean  "processed",  default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "mappings", id: false, force: true do |t|
-    t.integer "RateeGroup_id", null: false
-    t.integer "RaterGroup_id", null: false
-    t.integer "Evaluation_id", null: false
+    t.integer "ratee_group_id", null: false
+    t.integer "rater_group_id", null: false
+    t.integer "evaluation_id",  null: false
   end
 
-  add_index "mappings", ["Evaluation_id"], name: "index_mappings_on_Evaluation_id", using: :btree
-  add_index "mappings", ["RateeGroup_id", "RaterGroup_id"], name: "index_mappings_on_RateeGroup_id_and_RaterGroup_id", unique: true, using: :btree
-  add_index "mappings", ["RateeGroup_id"], name: "index_mappings_on_RateeGroup_id", using: :btree
-  add_index "mappings", ["RaterGroup_id"], name: "index_mappings_on_RaterGroup_id", using: :btree
+  add_index "mappings", ["evaluation_id"], name: "index_mappings_on_evaluation_id", using: :btree
+  add_index "mappings", ["ratee_group_id", "rater_group_id"], name: "index_mappings_on_ratee_group_id_and_rater_group_id", unique: true, using: :btree
+  add_index "mappings", ["ratee_group_id"], name: "index_mappings_on_ratee_group_id", using: :btree
+  add_index "mappings", ["rater_group_id"], name: "index_mappings_on_rater_group_id", using: :btree
 
   create_table "materials", force: true do |t|
     t.string   "subject",      null: false
@@ -91,33 +95,39 @@ ActiveRecord::Schema.define(version: 20141129004858) do
   add_index "materials", ["developer_id"], name: "index_materials_on_developer_id", using: :btree
 
   create_table "ratee_groups", force: true do |t|
+    t.integer "evaluation_id", null: false
   end
 
+  add_index "ratee_groups", ["evaluation_id"], name: "index_ratee_groups_on_evaluation_id", using: :btree
+
   create_table "rater_groups", force: true do |t|
+    t.integer "evaluation_id", null: false
   end
+
+  add_index "rater_groups", ["evaluation_id"], name: "index_rater_groups_on_evaluation_id", using: :btree
 
   create_table "results", force: true do |t|
     t.integer  "value",         default: 0
-    t.integer  "RaterGroup_id",             null: false
-    t.integer  "RateeGroup_id",             null: false
-    t.integer  "Evaluation_id",             null: false
-    t.integer  "Material_id",               null: false
+    t.integer  "ratee_id",                  null: false
+    t.integer  "rater_id",                  null: false
+    t.integer  "evaluation_id",             null: false
+    t.integer  "material_id",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "results", ["Evaluation_id"], name: "index_results_on_Evaluation_id", using: :btree
-  add_index "results", ["RateeGroup_id"], name: "index_results_on_RateeGroup_id", using: :btree
-  add_index "results", ["RaterGroup_id"], name: "index_results_on_RaterGroup_id", using: :btree
+  add_index "results", ["evaluation_id"], name: "index_results_on_evaluation_id", using: :btree
 
   create_table "selecteds", force: true do |t|
-    t.integer  "RaterGroup_id"
-    t.integer  "Developer_id"
+    t.integer  "rater_group_id"
+    t.integer  "developer_id",   null: false
+    t.integer  "evaluation_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "selecteds", ["Developer_id"], name: "index_selecteds_on_Developer_id", using: :btree
-  add_index "selecteds", ["RaterGroup_id"], name: "index_selecteds_on_RaterGroup_id", using: :btree
+  add_index "selecteds", ["developer_id"], name: "index_selecteds_on_developer_id", using: :btree
+  add_index "selecteds", ["evaluation_id"], name: "index_selecteds_on_evaluation_id", using: :btree
+  add_index "selecteds", ["rater_group_id"], name: "index_selecteds_on_rater_group_id", using: :btree
 
 end

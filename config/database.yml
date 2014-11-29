@@ -6,8 +6,8 @@ default: &default
 
 development:
  <<: *default
- database: evalsys_develop
+ database: evalsystem_develop
 
 test:
  <<: *default
- database: evalsys_test
+ database: evalsystem_test

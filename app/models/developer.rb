@@ -9,4 +9,8 @@ class Developer < ActiveRecord::Base
 
   has_many :applieds
   has_many :selecteds
+  has_many :results, foreign_key: :ratee_id
+  has_many :results, foreign_key: :rater_id
+  has_many :materials
+
 end

@@ -1,4 +1,5 @@
 class Applied < ActiveRecord::Base
-  belongs_to :RateeGroup
-  belongs_to :Developer
+	belongs_to :evaluation
+  belongs_to :ratee_group
+  belongs_to :developer
 end
