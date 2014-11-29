@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  RateeGroup_id: 
+  RaterGroup_id: 
+  Evaluation_id: 
+
+two:
+  RateeGroup_id: 
+  RaterGroup_id: 
+  Evaluation_id: 

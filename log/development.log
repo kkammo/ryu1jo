@@ -1,0 +1,1349 @@
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer, "RaterGroup_id" integer, "Evaluation_id" integer) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY ) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY ) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDepartments (20141124102232)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "Company_id" integer NOT NULL) [0m
+  [1m[35m (9.3ms)[0m  CREATE  INDEX  "index_departments_on_Company_id" ON "departments"  ("Company_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124102232"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDepartments (20141124102812)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "Company_id" integer NOT NULL) [0m
+  [1m[35m (9.3ms)[0m  CREATE  INDEX  "index_departments_on_Company_id" ON "departments"  ("Company_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124102812"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124102812)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "Company_id" integer PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_departments_on_Company_id" ON "departments"  ("Company_id")
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124102812"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124102812)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "Company_id" integer PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_departments_on_Company_id" ON "departments"  ("Company_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124102812"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124102812)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "Company_id" integer PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_departments_on_Company_id" ON "departments"  ("Company_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124102812"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "departments" ("id" serial primary key, "dname" character varying(255), "cname" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "departments" already exists
+: CREATE TABLE "departments" ("id" serial primary key, "dname" character varying(255), "cname" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255), "cname" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "departments" already exists
+: CREATE TABLE "departments" ("dname" character varying(255), "cname" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255), "cname" character varying(255)) [0m
+PG::DuplicateTable: ERROR:  relation "departments" already exists
+: CREATE TABLE "departments" ("dname" character varying(255), "cname" character varying(255)) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255), "cname" character varying(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_departments_on_dname" ON "departments"  ("dname")
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_departments_on_cname" ON "departments"  ("cname")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.1ms)[0m  INSERT INTO "companies" ("name") VALUES ($1) RETURNING "name"  [["name", "yonsei"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "yonsei"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.3ms)[0m  INSERT INTO "departments" ("cname", "dname") VALUES ($1, $2)  [["cname", "yonsei"], ["dname", "engine"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "departments" ("dname") VALUES ($1)[0m  [["dname", "null"]]
+PG::NotNullViolation: ERROR:  null value in column "cname" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+: INSERT INTO "departments" ("dname") VALUES ($1)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "departments" ("cname", "dname") VALUES ($1, $2)  [["cname", "null"], ["dname", "null"]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mDepartment Load (0.6ms)[0m  SELECT "departments".* FROM "departments"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "departments" DEFAULT VALUES
+PG::NotNullViolation: ERROR:  null value in column "dname" violates not-null constraint
+DETAIL:  Failing row contains (null, null).
+: INSERT INTO "departments" DEFAULT VALUES
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "departments" ("cname", "dname") VALUES ($1, $2)[0m  [["cname", "del"], ["dname", "del"]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1[0m  [["name", "del"]]
+  [1m[35mCompany Load (0.6ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "del"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mDepartment Load (0.5ms)[0m  [1mSELECT "departments".* FROM "departments"[0m
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124103702"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "del"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mDepartment Load (0.8ms)[0m  SELECT "departments".* FROM "departments"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "del"]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "companies" ("name") VALUES ($1) RETURNING "name"[0m  [["name", "del"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "del"]]
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "departments" ("cname", "dname") VALUES ($1, $2) RETURNING "dname","cname"[0m  [["cname", "del"], ["dname", "del"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mDepartment Load (0.7ms)[0m  [1mSELECT "departments".* FROM "departments"[0m
+  [1m[35mDepartment Load (0.5ms)[0m  SELECT  "departments".* FROM "departments"  WHERE ("departments"."dname" = $1 AND "departments"."cname" = $2) LIMIT 1  [["dname", "del"], ["cname", "del"]]
+  [1m[36mDepartment Load (0.6ms)[0m  [1mSELECT  "departments".* FROM "departments"  WHERE ("departments"."dname" = $1 AND "departments"."cname" = $2) LIMIT 1[0m  [["dname", "del"], ["cname", "del"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1[0m  [["name", "a"]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "a"]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "del"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "departments" ("cname", "dname") VALUES ($1, $2) RETURNING "dname","cname"[0m  [["cname", "del"], ["dname", "del"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_departments_on_dname_and_cname"
+DETAIL:  Key (dname, cname)=(del, del) already exists.
+: INSERT INTO "departments" ("cname", "dname") VALUES ($1, $2) RETURNING "dname","cname"
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "mappings" DEFAULT VALUES RETURNING "RateeGroup_id","RaterGroup_id"
+PG::NotNullViolation: ERROR:  null value in column "RateeGroup_id" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null).
+: INSERT INTO "mappings" DEFAULT VALUES RETURNING "RateeGroup_id","RaterGroup_id"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mMapping Load (1.1ms)[0m  [1mSELECT  "mappings".* FROM "mappings"  WHERE ("mappings"."RateeGroup_id" = $1 AND "mappings"."RaterGroup_id" = $2) LIMIT 1[0m  [["RateeGroup_id", 1], ["RaterGroup_id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024058"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSelecteds (20141126024234)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "evaluations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-11-26 02:49:02.677085"], ["updated_at", "2014-11-26 02:49:02.677085"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (71.6ms)[0m  [1mINSERT INTO "ratee_groups" DEFAULT VALUES RETURNING "id"[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.8ms)[0m  INSERT INTO "rater_groups" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mMapping Load (1.1ms)[0m  SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[36mMapping Load (0.6ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1[0m
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[35mMapping Load (0.6ms)[0m  SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[36mMapping Load (0.6ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1[0m
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[35mMapping Load (9.5ms)[0m  SELECT "mappings".* FROM "mappings"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "mappings" ("Evaluation_id", "RateeGroup_id", "RaterGroup_id") VALUES ($1, $2, $3) RETURNING "RateeGroup_id","RaterGroup_id"  [["Evaluation_id", 1], ["RateeGroup_id", 1], ["RaterGroup_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mMapping Load (0.9ms)[0m  SELECT "mappings".* FROM "mappings"
+  [1m[36mMapping Load (0.6ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1[0m
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[35mMapping Load (0.5ms)[0m  SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[36mMapping Load (0.5ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1[0m
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[35mMapping Load (0.6ms)[0m  SELECT  "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1 LIMIT 1
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT  "mappings".* FROM "mappings"  WHERE "mappings"."rate...
+                                                    ^
+: SELECT  "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1 LIMIT 1
+  [1m[36mMapping Load (0.8ms)[0m  [1mSELECT  "mappings".* FROM "mappings"  WHERE "mappings"."RateeGroup_id" = 1 LIMIT 1[0m
+  [1m[35mMapping Load (0.7ms)[0m  SELECT  "mappings".* FROM "mappings"  WHERE "mappings"."RateeGroup_id" = 1 LIMIT 1
+  [1m[36mMapping Load (0.5ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1[0m
+PG::UndefinedColumn: ERROR:  column mappings.ratee_group_id does not exist
+LINE 1: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee...
+                                                   ^
+: SELECT "mappings".* FROM "mappings"  WHERE "mappings"."ratee_group_id" = 1
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")[0m
+PG::UndefinedColumn: ERROR:  column "ratee_group_id" does not exist
+: CREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("ratee_group_id" integer NOT NULL, "rater_group_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_ratee_group_id" ON "mappings"  ("ratee_group_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_rater_group_id" ON "mappings"  ("rater_group_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024058"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSelecteds (20141126024234)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "evaluations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-11-26 03:06:59.890596"], ["updated_at", "2014-11-26 03:06:59.890596"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvaluation Load (1.0ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "ratee_groups" DEFAULT VALUES RETURNING "id"
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "rater_groups" DEFAULT VALUES RETURNING "id"[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+PG::UndefinedColumn: ERROR:  column "RateeGroup_id" does not exist
+LINE 1: ..., "rater_group_id") VALUES ($1, $2, $3) RETURNING "RateeGrou...
+                                                             ^
+: INSERT INTO "mappings" ("Evaluation_id", "ratee_group_id", "rater_group_id") VALUES ($1, $2, $3) RETURNING "RateeGroup_id","RaterGroup_id"
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mRateeGroup Load (0.6ms)[0m  [1mSELECT "ratee_groups".* FROM "ratee_groups"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+PG::UndefinedColumn: ERROR:  column "RateeGroup_id" does not exist
+LINE 1: ..., "rater_group_id") VALUES ($1, $2, $3) RETURNING "RateeGrou...
+                                                             ^
+: INSERT INTO "mappings" ("Evaluation_id", "ratee_group_id", "rater_group_id") VALUES ($1, $2, $3) RETURNING "RateeGroup_id","RaterGroup_id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mRateeGroup Load (0.4ms)[0m  SELECT "ratee_groups".* FROM "ratee_groups"
+  [1m[36mMapping Load (1.1ms)[0m  [1mSELECT "mappings".* FROM "mappings"[0m
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("rateegroup_id" integer NOT NULL, "ratergroup_id" integer NOT NULL, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_rateegroup_id" ON "mappings"  ("rateegroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_mappings_on_ratergroup_id" ON "mappings"  ("ratergroup_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_evaluation_id" ON "mappings"  ("evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124103702"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141125055304"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateApplieds (20141126024058)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024058"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateSelecteds (20141126024234)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024234"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (12.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124100130"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateCompanies (20141124101548)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124101548"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDepartments (20141124103702)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124103702"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141125055304"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateApplieds (20141126024058)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024058"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateSelecteds (20141126024234)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024234"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024058"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSelecteds (20141126024234)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResults (20141129004858)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "RaterGroup_id" integer, "RateeGroup_id" integer, "Evaluation_id" integer, "Material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_results_on_RaterGroup_id" ON "results"  ("RaterGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_results_on_RateeGroup_id" ON "results"  ("RateeGroup_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_results_on_Evaluation_id" ON "results"  ("Evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004858"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024058"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSelecteds (20141126024234)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateResults (20141129004858)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "RaterGroup_id" integer NOT NULL, "RateeGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL, "Material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_results_on_RaterGroup_id" ON "results"  ("RaterGroup_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_results_on_RateeGroup_id" ON "results"  ("RateeGroup_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_results_on_Evaluation_id" ON "results"  ("Evaluation_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141129004858"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095222"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "rater_groups" ("id" serial primary key) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "mappings" ("RateeGroup_id" integer NOT NULL, "RaterGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_RateeGroup_id" ON "mappings"  ("RateeGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_mappings_on_RaterGroup_id" ON "mappings"  ("RaterGroup_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_Evaluation_id" ON "mappings"  ("Evaluation_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_RateeGroup_id_and_RaterGroup_id" ON "mappings"  ("RateeGroup_id", "RaterGroup_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) PRIMARY KEY  NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "RateeGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_applieds_on_RateeGroup_id" ON "applieds"  ("RateeGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_applieds_on_Developer_id" ON "applieds"  ("Developer_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024058"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSelecteds (20141126024234)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "selecteds" ("id" serial primary key, "RaterGroup_id" integer, "Developer_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_selecteds_on_RaterGroup_id" ON "selecteds"  ("RaterGroup_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_Developer_id" ON "selecteds"  ("Developer_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "content" text NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateResults (20141129004858)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "RaterGroup_id" integer NOT NULL, "RateeGroup_id" integer NOT NULL, "Evaluation_id" integer NOT NULL, "Material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_results_on_RaterGroup_id" ON "results"  ("RaterGroup_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_results_on_RateeGroup_id" ON "results"  ("RateeGroup_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_results_on_Evaluation_id" ON "results"  ("Evaluation_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141129004858"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
