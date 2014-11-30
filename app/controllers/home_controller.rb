@@ -34,6 +34,13 @@ class HomeController < ApplicationController
 				for i in 0..applieds.count-1
 					@jobs += Material.where(developer_id: applieds[i].developer_id)
 				end
+
+				results = Result.where(evaluation_id: @eval.id)
+				resulted_materials = []
+				for i in 0..results.count-1
+					resulted_materials += [Material.find(results[i].material_id)]
+				end
+				@jobs = @jobs - resulted_materials
 			end
 		end
 	end

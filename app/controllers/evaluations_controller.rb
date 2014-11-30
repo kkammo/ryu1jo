@@ -30,7 +30,7 @@ class EvaluationsController < ApplicationController
   def apply
     @evaluation = Evaluation.find(params[:id])
     
-    if Applied.where(evaluation_id: @evaluation.id, developer_id: current_developer.id).nil?
+    if Applied.where(evaluation_id: @evaluation.id, developer_id: current_developer.id).count==0
       @applied = @evaluation.applieds.new
       @applied.developer_id = current_developer.id
       if @applied.save

@@ -18,6 +18,10 @@ class ResultsController < ApplicationController
   # GET /results/new
   def new
     @material = Material.find(params[:material_id])
+    if Result.where(rater_id: current_developer.id, material_id: @material.id, evaluation_id: params[:evaluation_id]).count > 0
+      redirect_to root_path, notice: '이미 평가하였습니다.'
+    end
+
     if @material
       @result = Result.new(material_id: @material.id)
     end
