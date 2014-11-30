@@ -5,7 +5,7 @@ class CreateMaterials < ActiveRecord::Migration
       t.text :content, null: false
       t.integer :field, null: false
       t.references :developer, index: true, null: false
-      t.integer :prate, null: false
+      t.float :prate, null: false
 
       t.timestamps
     end

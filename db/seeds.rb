@@ -15,7 +15,7 @@ puts 'New user created: ' << c1.name
 u1 = Developer.create! :email => 'student1@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이1"
 u2 = Developer.create! :email => 'student2@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이2"
 
-e = Evaluation.create!
+e = Evaluation.create! :appliable => false
 
 a1 = e.applieds.create! :developer_id => u1.id
 

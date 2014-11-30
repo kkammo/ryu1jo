@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20141130080409) do
     t.text     "content",      null: false
     t.integer  "field",        null: false
     t.integer  "developer_id", null: false
-    t.integer  "prate",        null: false
+    t.float    "prate",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -118,11 +118,11 @@ ActiveRecord::Schema.define(version: 20141130080409) do
   add_index "rater_groups", ["evaluation_id"], name: "index_rater_groups_on_evaluation_id", using: :btree
 
   create_table "results", force: true do |t|
-    t.integer  "value",         default: 0
-    t.integer  "ratee_id",                  null: false
-    t.integer  "rater_id",                  null: false
-    t.integer  "evaluation_id",             null: false
-    t.integer  "material_id",               null: false
+    t.float    "value",         default: 0.0
+    t.integer  "ratee_id",                    null: false
+    t.integer  "rater_id",                    null: false
+    t.integer  "evaluation_id",               null: false
+    t.integer  "material_id",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
