@@ -11,6 +11,8 @@ class MaterialsController < ApplicationController
   def show
     unless @material.developer_id == current_developer.id
       redirect_to materials_path
+    else
+      @results = Result.where(material_id: @material.id)
     end
   end
 

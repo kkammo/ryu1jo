@@ -1,4 +1,31 @@
 <p id="notice"><%= notice %></p>
+<h2> 평가결과 </h2>
+<div>
+  <h4>
+    <%= @material.subject %>
+  </h4>
+</div>
 
-<%= link_to 'Edit', edit_result_path(@result) %> |
-<%= link_to 'Back', results_path %>
+<div>
+  <h4>
+    <%= @material.field %>
+  </h4>
+  <p>
+    <%= @material.created_at.strftime("%H:%M / %d %b. %Y") %>
+  </p>
+</div>
+
+<pre>
+  <text>
+    <%= @material.content %>
+  </text>
+</pre>
+<br>
+<%= '---------------------------------------------' %>
+<br>
+
+<div>
+  <h2>
+    평가된 점수: <%= @result.value %>
+  </h2>
+</div>

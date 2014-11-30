@@ -46,7 +46,7 @@ class EvaluationsController < ApplicationController
   def map
     @evaluation = Evaluation.find(params[:id])
 
-    # unless @evaluation.appliable && @evaluation.processed
+    if @evaluation.appliable && (@evaluation.processed==false)
       if params[:rateemem] && params[:ratermem]
       if (params[:rateemem].to_i > 0) && (params[:ratermem].to_i > 0)
         num_of_appliers = @evaluation.applieds.count
@@ -177,10 +177,11 @@ class EvaluationsController < ApplicationController
           applieds[v].save
         end
 
-
+        @evaluation.appliable = false
+        @evaluation.save
       end
     end
-  # end
+  end
     redirect_to root_path
   end
 

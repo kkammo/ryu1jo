@@ -1,4 +1,5 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
+<h2>내 정보</h2>
   <div class="row" style="background-color: white">
     <div class="col-md-8">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -74,7 +75,27 @@
         <button type="submit" class="btn btn-warning btn-xs">
           수정하기
         </button>
-      <% end %>      
+      <% end %>
+      <br>
+      <div>
+        <p>평가한 자료 수: <%= Result.where(rater_id: current_developer.id).count %> </p>
+        <p>평가 평점: <% if (cnt = Result.where(rater_id: current_developer.id).count) > 0 %><%= Result.where(rater_id: current_developer.id).sum(:value)/cnt %> <% else %>0.0<% end %> </p>
+        <p> 올린 자료의 수: <%= current_developer.materials.count %></p>
+        <p> 나의 평점: 
+          <% sum = 0 %>
+          <% cnt = 0 %>
+          <% for i in 0..current_developer.materials.count-1 %>
+            <% sum += Result.where(material_id: current_developer.materials[i].id).sum(:value) %>
+            <% cnt += Result.where(material_id: current_developer.materials[i].id).count %>
+          <% end %>
+          <% if cnt > 0 %>
+            <%= sum/cnt %>
+          <% else %>
+            0
+          <% end %>
+        </p>
+      </div>
+
     </div>
   </div>
 

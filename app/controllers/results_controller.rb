@@ -12,6 +12,8 @@ class ResultsController < ApplicationController
     unless (@result.ratee_id == current_developer.id) ||
       (@result.rater_id == current_developer.id)
       redirect_to materials_path
+    else
+      @material = Material.find(@result.material_id)
     end
   end
 
