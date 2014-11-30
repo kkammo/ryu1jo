@@ -18943,3 +18943,1218 @@ Processing by AdminController#evaluation as HTML
   Rendered admin/evaluation.html.erb within layouts/application (22.5ms)
   [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
 Completed 200 OK in 98ms (Views: 87.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (1.6ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 88ms (Views: 71.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:09 +0900
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:02:10 +0900
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:02:12 +0900
+Processing by ResultsController#new as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:20:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:02:12 +0900
+Processing by ResultsController#new as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:20:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:02:28 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.8ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (10.3ms)[0m  SELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 1
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 122ms (Views: 99.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 1
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 67.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:13 +0900
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:08:14 +0900
+Processing by ResultsController#new as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:20:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+Processing by ResultsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 86ms (Views: 80.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+Processing by ResultsController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:16 +0900
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+Processing by ResultsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:21 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:22 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 23:08:24 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:43 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/results" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+Processing by ResultsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:08:44 +0900
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:08:49 +0900
+Processing by ResultsController#new as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:20:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:08:49 +0900
+Processing by ResultsController#new as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:20:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "appliable" boolean DEFAULT 't', "processed" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_ratee_groups_on_evaluation_id" ON "ratee_groups"  ("evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124095222"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "rater_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_rater_groups_on_evaluation_id" ON "rater_groups"  ("evaluation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("ratee_group_id" integer NOT NULL, "rater_group_id" integer NOT NULL, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_ratee_group_id" ON "mappings"  ("ratee_group_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_mappings_on_rater_group_id" ON "mappings"  ("rater_group_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_evaluation_id" ON "mappings"  ("evaluation_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) DEFAULT 'freelancer' NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "ratee_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_applieds_on_ratee_group_id" ON "applieds"  ("ratee_group_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_applieds_on_developer_id" ON "applieds"  ("developer_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_applieds_on_evaluation_id" ON "applieds"  ("evaluation_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024058"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateSelecteds (20141126024234)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.3ms)[0m  CREATE TABLE "selecteds" ("id" serial primary key, "rater_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_rater_group_id" ON "selecteds"  ("rater_group_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_selecteds_on_developer_id" ON "selecteds"  ("developer_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_evaluation_id" ON "selecteds"  ("evaluation_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "content" text NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateResults (20141129004858)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "ratee_id" integer NOT NULL, "rater_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_results_on_evaluation_id" ON "results"  ("evaluation_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141129004858"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCareers (20141130080409)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "careers" ("id" serial primary key, "developer_id" integer, "prev" character varying(255), "current" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_careers_on_developer_id" ON "careers"  ("developer_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141130080409"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("name") VALUES ($1) RETURNING "name"[0m  [["name", "freelancer"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (1.3ms)[0m  SELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student1@ex.com' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-30 14:16:39.635844"], ["email", "student1@ex.com"], ["encrypted_password", "$2a$10$MUd7wkhP3xeOTGRyEA88luJxtkRZs3U8WsVvmWBACpEyWmQxMOYZi"], ["name", "개똥이1"], ["updated_at", "2014-11-30 14:16:39.635844"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student2@ex.com' LIMIT 1[0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 14:16:39.728473"], ["email", "student2@ex.com"], ["encrypted_password", "$2a$10$ZbW7qVsGFIzJIdHjma17/.cD0wVYQ/nSvg2n0m0CPwRK.2WKmsdia"], ["name", "개똥이2"], ["updated_at", "2014-11-30 14:16:39.728473"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "evaluations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-11-30 14:16:39.737600"], ["updated_at", "2014-11-30 14:16:39.737600"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "applieds" ("created_at", "developer_id", "evaluation_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-30 14:16:39.764150"], ["developer_id", 1], ["evaluation_id", 1], ["updated_at", "2014-11-30 14:16:39.764150"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "appliable" boolean DEFAULT 't', "processed" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_ratee_groups_on_evaluation_id" ON "ratee_groups"  ("evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124095222"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "rater_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_rater_groups_on_evaluation_id" ON "rater_groups"  ("evaluation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("ratee_group_id" integer NOT NULL, "rater_group_id" integer NOT NULL, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_ratee_group_id" ON "mappings"  ("ratee_group_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_mappings_on_rater_group_id" ON "mappings"  ("rater_group_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_mappings_on_evaluation_id" ON "mappings"  ("evaluation_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) DEFAULT 'freelancer' NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "ratee_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_applieds_on_ratee_group_id" ON "applieds"  ("ratee_group_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_applieds_on_developer_id" ON "applieds"  ("developer_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_applieds_on_evaluation_id" ON "applieds"  ("evaluation_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024058"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateSelecteds (20141126024234)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "selecteds" ("id" serial primary key, "rater_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_rater_group_id" ON "selecteds"  ("rater_group_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_selecteds_on_developer_id" ON "selecteds"  ("developer_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_evaluation_id" ON "selecteds"  ("evaluation_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "content" text NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateResults (20141129004858)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "ratee_id" integer NOT NULL, "rater_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_results_on_evaluation_id" ON "results"  ("evaluation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141129004858"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCareers (20141130080409)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "careers" ("id" serial primary key, "developer_id" integer, "prev" character varying(255), "current" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_careers_on_developer_id" ON "careers"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141130080409"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("name") VALUES ($1) RETURNING "name"[0m  [["name", "freelancer"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (1.2ms)[0m  SELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student1@ex.com' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1[0m
+  [1m[35mSQL (9.4ms)[0m  INSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-30 14:17:10.117399"], ["email", "student1@ex.com"], ["encrypted_password", "$2a$10$kYJ5ihxs8.T/5Yq8PbmLGeEYYpM3EYVRz9BkhYmy2CtMDUMUzJN9i"], ["name", "개똥이1"], ["updated_at", "2014-11-30 14:17:10.117399"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student2@ex.com' LIMIT 1[0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 14:17:10.218429"], ["email", "student2@ex.com"], ["encrypted_password", "$2a$10$2MTBxVHS1g0gvDPwhSOj9ehLZE51y5vxAjnYn/rwYgw166uWxYlMW"], ["name", "개똥이2"], ["updated_at", "2014-11-30 14:17:10.218429"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "evaluations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-11-30 14:17:10.228135"], ["updated_at", "2014-11-30 14:17:10.228135"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "applieds" ("created_at", "developer_id", "evaluation_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-30 14:17:10.254504"], ["developer_id", 1], ["evaluation_id", 1], ["updated_at", "2014-11-30 14:17:10.254504"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["content", "abcdefg"], ["created_at", "2014-11-30 14:17:10.268015"], ["developer_id", 1], ["field", 0], ["prate", 1], ["subject", "자료0"], ["updated_at", "2014-11-30 14:17:10.268015"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["content", "abcdefg"], ["created_at", "2014-11-30 14:17:10.272279"], ["developer_id", 2], ["field", 1], ["prate", 1], ["subject", "자료1"], ["updated_at", "2014-11-30 14:17:10.272279"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvaluations (20141124094850)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "evaluations" ("id" serial primary key, "appliable" boolean DEFAULT 't', "processed" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124094850"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRateeGroups (20141124095222)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "ratee_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_ratee_groups_on_evaluation_id" ON "ratee_groups"  ("evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124095222"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateRaterGroups (20141124095244)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "rater_groups" ("id" serial primary key, "evaluation_id" integer NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_rater_groups_on_evaluation_id" ON "rater_groups"  ("evaluation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124095244"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMappings (20141124100130)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "mappings" ("ratee_group_id" integer NOT NULL, "rater_group_id" integer NOT NULL, "evaluation_id" integer NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_mappings_on_ratee_group_id" ON "mappings"  ("ratee_group_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_mappings_on_rater_group_id" ON "mappings"  ("rater_group_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX  "index_mappings_on_evaluation_id" ON "mappings"  ("evaluation_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_mappings_on_ratee_group_id_and_rater_group_id" ON "mappings"  ("ratee_group_id", "rater_group_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124100130"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompanies (20141124101548)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "companies" ("name" character varying(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_companies_on_name" ON "companies"  ("name")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141124101548"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Migrating to CreateDepartments (20141124103702)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "departments" ("dname" character varying(255) NOT NULL, "cname" character varying(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_departments_on_dname_and_cname" ON "departments"  ("dname", "cname")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141124103702"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateDevelopers (20141125055304)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "developers" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "name" character varying(255), "cname" character varying(255) DEFAULT 'freelancer' NOT NULL, "dname" character varying(255), "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_developers_on_email" ON "developers"  ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_developers_on_reset_password_token" ON "developers"  ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_developers_on_cname" ON "developers"  ("cname")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_developers_on_dname" ON "developers"  ("dname")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141125055304"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateApplieds (20141126024058)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "applieds" ("id" serial primary key, "ratee_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_applieds_on_ratee_group_id" ON "applieds"  ("ratee_group_id")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_applieds_on_developer_id" ON "applieds"  ("developer_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_applieds_on_evaluation_id" ON "applieds"  ("evaluation_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141126024058"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateSelecteds (20141126024234)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "selecteds" ("id" serial primary key, "rater_group_id" integer, "developer_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_rater_group_id" ON "selecteds"  ("rater_group_id")[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_selecteds_on_developer_id" ON "selecteds"  ("developer_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_selecteds_on_evaluation_id" ON "selecteds"  ("evaluation_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126024234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMaterials (20141129004410)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "materials" ("id" serial primary key, "subject" character varying(255) NOT NULL, "content" text NOT NULL, "field" integer NOT NULL, "developer_id" integer NOT NULL, "prate" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_materials_on_developer_id" ON "materials"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141129004410"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateResults (20141129004858)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "results" ("id" serial primary key, "value" integer DEFAULT 0, "ratee_id" integer NOT NULL, "rater_id" integer NOT NULL, "evaluation_id" integer NOT NULL, "material_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_results_on_evaluation_id" ON "results"  ("evaluation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141129004858"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCareers (20141130080409)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "careers" ("id" serial primary key, "developer_id" integer, "prev" character varying(255), "current" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_careers_on_developer_id" ON "careers"  ("developer_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141130080409"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("name") VALUES ($1) RETURNING "name"[0m  [["name", "freelancer"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (1.1ms)[0m  SELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student1@ex.com' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1[0m
+  [1m[35mSQL (9.0ms)[0m  INSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-30 14:17:56.047694"], ["email", "student1@ex.com"], ["encrypted_password", "$2a$10$4AaIrhStU/PegqA4KiI5pOVJbtOgMk9qIIH9TZJt/Ba03fhdbBCWS"], ["name", "개똥이1"], ["updated_at", "2014-11-30 14:17:56.047694"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "developers"  WHERE "developers"."email" = 'student2@ex.com' LIMIT 1[0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "developers" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 14:17:56.152044"], ["email", "student2@ex.com"], ["encrypted_password", "$2a$10$tF9X8/wTHPqPVMP6rSwEsOfsshPpvEWtdbGBZwGv3tk6cOCOAmvc2"], ["name", "개똥이2"], ["updated_at", "2014-11-30 14:17:56.152044"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "evaluations" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-11-30 14:17:56.161175"], ["updated_at", "2014-11-30 14:17:56.161175"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "applieds" ("created_at", "developer_id", "evaluation_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-30 14:17:56.178975"], ["developer_id", 1], ["evaluation_id", 1], ["updated_at", "2014-11-30 14:17:56.178975"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mDeveloper Load (1.1ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["content", "abcdefg"], ["created_at", "2014-11-30 14:17:56.232409"], ["developer_id", 1], ["field", 0], ["prate", 1], ["subject", "자료0"], ["updated_at", "2014-11-30 14:17:56.232409"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["content", "abcdefg"], ["created_at", "2014-11-30 14:17:56.239949"], ["developer_id", 2], ["field", 1], ["prate", 1], ["subject", "자료1"], ["updated_at", "2014-11-30 14:17:56.239949"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "ratee_groups" ("evaluation_id") VALUES ($1) RETURNING "id"  [["evaluation_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "rater_groups" ("evaluation_id") VALUES ($1) RETURNING "id"  [["evaluation_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "selecteds" ("created_at", "developer_id", "evaluation_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-30 14:17:56.280711"], ["developer_id", 2], ["evaluation_id", 1], ["updated_at", "2014-11-30 14:17:56.280711"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRaterGroup Load (0.4ms)[0m  [1mSELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 1 LIMIT 1[0m
+  [1m[35mRateeGroup Load (0.3ms)[0m  SELECT  "ratee_groups".* FROM "ratee_groups"  WHERE "ratee_groups"."id" = 1 LIMIT 1
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "mappings" ("evaluation_id", "ratee_group_id", "rater_group_id") VALUES ($1, $2, $3) RETURNING "ratee_group_id","rater_group_id"  [["evaluation_id", 1], ["ratee_group_id", 1], ["rater_group_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "applieds" SET "ratee_group_id" = $1, "updated_at" = $2 WHERE "applieds"."id" = 1[0m  [["ratee_group_id", 1], ["updated_at", "2014-11-30 14:17:56.307329"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "selecteds" SET "rater_group_id" = $1, "updated_at" = $2 WHERE "selecteds"."id" = 1  [["rater_group_id", 1], ["updated_at", "2014-11-30 14:17:56.311085"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/results/new" for 127.0.0.1 at 2014-11-30 23:18:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#new as HTML
+  [1m[35mDeveloper Load (1.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 56ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:18:10 +0900
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/home_controller.rb:4:in `index'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:18:11 +0900
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/home_controller.rb:4:in `index'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:18:11 +0900
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/home_controller.rb:4:in `index'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:18:18 +0900
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/home_controller.rb:4:in `index'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.5ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  Rendered evaluations/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 179ms (Views: 168.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:25 +0900
+
+
+Started GET "/developers/sign_in" for 127.0.0.1 at 2014-11-30 23:18:28 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 105ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zPCvgU7ubsqJDPEqrKyuDaet+zbK5UMbkk+nMYPz10I=", "developer"=>{"email"=>"student2@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."email" = 'student2@ex.com'  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "developers" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "developers"."id" = 2  [["current_sign_in_at", "2014-11-30 14:18:58.351087"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_at", "2014-11-30 14:18:58.351087"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2014-11-30 14:18:58.352458"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 114ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.3ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.6ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.5ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.6ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 112ms (Views: 74.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:18:58 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.2ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.2ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.2ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:16 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.2ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.2ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.2ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:26 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.3ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.3ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.3ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 60.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:22:59 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.4ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.5ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.3ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 65.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:24:35 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.2ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.2ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.2ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:23 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:24 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:26:24 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-11-30 23:26:25 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mResult Load (0.7ms)[0m  SELECT  "results".* FROM "results"  WHERE "results"."material_id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `new' for nil:NilClass):
+  app/controllers/results_controller.rb:21:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-11-30 23:26:25 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."material_id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `new' for nil:NilClass):
+  app/controllers/results_controller.rb:21:in `new'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+  [1m[36mMaterial Load (0.6ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mMaterial Load (0.7ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mResult Load (1.0ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."material_id" = 1 LIMIT 1[0m
+  [1m[35mMaterial Load (0.5ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mResult Load (0.6ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."material_id" = 1 LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2[0m
+  [1m[35mSelected Load (0.3ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  [1m[36mMapping Load (0.4ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.3ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 132ms (Views: 81.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 23:33:05 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-11-30 23:33:07 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (3.9ms)
+  Rendered results/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 94ms (Views: 81.2ms | ActiveRecord: 2.4ms)

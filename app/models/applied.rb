@@ -3,5 +3,5 @@ class Applied < ActiveRecord::Base
   belongs_to :ratee_group
   belongs_to :developer
 
-  validates_presence_of :evaluation, :ratee_group, :developer
+  validates_presence_of :evaluation, :developer
 end

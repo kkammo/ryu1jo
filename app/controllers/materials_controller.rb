@@ -9,11 +9,13 @@ class MaterialsController < ApplicationController
 
   # GET /materials/1
   def show
+    unless @material.developer_id == current_developer.id
+      redirect_to materials_path
+    end
   end
 
   # GET /materials/new
   def new
-
     @material = current_developer.materials.new
   end
 
@@ -47,4 +49,5 @@ class MaterialsController < ApplicationController
     def material_params
       params.require(:material).permit(:subject, :content, :field, :prate)
     end
+
 end

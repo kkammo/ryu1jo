@@ -1,4 +1,5 @@
 Home!
+<br>
 
 <table class="table table-condensed">
   <thead>
@@ -10,7 +11,9 @@ Home!
   <tbody>
     <% @jobs.each do |job| %>
       <tr style="background-color: ghostwhite">
-        <%= job.subject %>
+        <td>
+          <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+        </td>
       </tr>
     <% end %>
   </tbody>

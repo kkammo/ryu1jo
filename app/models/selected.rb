@@ -3,5 +3,5 @@ class Selected < ActiveRecord::Base
   belongs_to :rater_group
   belongs_to :developer
 
-	validates_presence_of :evaluation, :rater_group, :developer
+	validates_presence_of :evaluation, :developer
 end

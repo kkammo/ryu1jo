@@ -13,6 +13,7 @@ class AdminController < ApplicationController
   def evaluation
   	@evaluation = Evaluation.find(params[:id])
     @applieds = @evaluation.applieds
+    @mappings = @evaluation.mappings
   end
   
 end

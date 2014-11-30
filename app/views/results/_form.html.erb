@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="actions">
+    <%= f.label '평가 점수' %><br>
+    <%= f.number_field :value %>
+  </div>
+
+  <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -9,22 +9,36 @@ class ResultsController < ApplicationController
 
   # GET /results/1
   def show
+    unless (@result.ratee_id == current_developer.id) ||
+      (@result.rater_id == current_developer.id)
+      redirect_to materials_path
+    end
   end
 
   # GET /results/new
   def new
-    @result = Result.new
+    @material = Material.find(params[:material_id])
+    if @material
+      @result = Result.new(material_id: @material.id)
+    end
   end
 
   # POST /results
   def create
-    @result = Result.new(result_params)
+    @material = Material.find(params[:material_id])
+    if @material
+      @result = @material.result.new(result_params)
+      @result.material_id = @material.id
+      @result.ratee_id = @material.developer_id
+      @result.rater_id = current_developer.id
+      @result.value *= @material.prate
 
-    respond_to do |format|
-      if @result.save
-        format.html { redirect_to @result, notice: 'Result was successfully created.' }
-      else
+      respond_to do |format|
+        if @result.save
+          format.html { redirect_to @result, notice: 'Result was successfully created.' }
+        else
         format.html { render :new }
+        end
       end
     end
   end
@@ -35,6 +49,6 @@ class ResultsController < ApplicationController
     end
 
     def result_params
-      params.require(:result).permit(:value, :ratee_id, :rater_id, :evaluation_id, :material_id)
+      params.require(:result).permit(:value)
     end
 end
