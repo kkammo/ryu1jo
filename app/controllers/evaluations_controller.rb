@@ -54,10 +54,11 @@ class EvaluationsController < ApplicationController
         total_ratee_groups = num_of_appliers/params[:rateemem].to_i
         total_rater_groups = (num_of_appliers/2)/params[:ratermem].to_i
 
-        if num_of_appliers%params[:rateemem].to_i
+        if (num_of_appliers%params[:rateemem].to_i)!=0
           total_ratee_groups += 1
         end
-        if num_of_appliers%params[:ratermem].to_i
+
+        if ((num_of_appliers/2)%params[:ratermem].to_i)!=0
           total_rater_groups += 1
         end
 
@@ -101,8 +102,7 @@ class EvaluationsController < ApplicationController
           selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_appliers/2)
           
           for i in 0..(applieds.count-1)
-            puts "i: #{i}"
-            applieds[i].ratee_group_id = rateegroups[i%total_ratee_groups].id
+            applieds[i].ratee_group_id = rateegroups[i/params[:rateemem].to_i].id
           end
 
           dev_selector = 0
@@ -158,7 +158,7 @@ class EvaluationsController < ApplicationController
             end
           end while (finish_flag == false)&&(loop_counter <= ((num_of_appliers/2)*total_rater_groups))
 
-        end while (finish_flag == false)&&(case_counter<1000)
+        end while (finish_flag == false)&&(case_counter<5000)
 
 
         for l in 0..(selecteds.count-1)

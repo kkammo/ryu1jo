@@ -22382,3 +22382,193 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38
 
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started POST "/materials" for 127.0.0.1 at 2014-12-01 02:06:35 +0900
+Processing by MaterialsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "material"=>{"subject"=>"웹1", "field"=>"web", "prate"=>"1", "content"=>"ㄹㄹㄹㄹ"}, "commit"=>"Create Material"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "ㄹㄹㄹㄹ"], ["created_at", "2014-11-30 17:06:35.914616"], ["developer_id", 2], ["field", 0], ["prate", 1], ["subject", "웹1"], ["updated_at", "2014-11-30 17:06:35.914616"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/materials/3
+Completed 302 Found in 15ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/materials/3" for 127.0.0.1 at 2014-12-01 02:06:35 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:36 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 02:06:41 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2
+  Rendered materials/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/materials/new" for 127.0.0.1 at 2014-12-01 02:06:43 +0900
+Processing by MaterialsController#new as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered materials/_form.html.erb (2.9ms)
+  Rendered materials/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/materials" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+Processing by MaterialsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "material"=>{"subject"=>"앱충", "field"=>"ios", "prate"=>"1", "content"=>"ㄹㄹㄹㄹ"}, "commit"=>"Create Material"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["content", "ㄹㄹㄹㄹ"], ["created_at", "2014-11-30 17:06:53.059240"], ["developer_id", 2], ["field", 1], ["prate", 1], ["subject", "앱충"], ["updated_at", "2014-11-30 17:06:53.059240"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/materials/4
+Completed 302 Found in 16ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/materials/4" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered materials/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:06:53 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 02:06:56 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2[0m
+  Rendered materials/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/materials/new" for 127.0.0.1 at 2014-12-01 02:07:00 +0900
+Processing by MaterialsController#new as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/_form.html.erb (2.3ms)
+  Rendered materials/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/materials" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+Processing by MaterialsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "material"=>{"subject"=>"앱등2", "field"=>"ios", "prate"=>"1", "content"=>"ㄹㄹㄹㄹㄹ"}, "commit"=>"Create Material"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "materials" ("content", "created_at", "developer_id", "field", "prate", "subject", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "ㄹㄹㄹㄹㄹ"], ["created_at", "2014-11-30 17:07:23.783613"], ["developer_id", 2], ["field", 1], ["prate", 1], ["subject", "앱등2"], ["updated_at", "2014-11-30 17:07:23.783613"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/materials/5
+Completed 302 Found in 15ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/materials/5" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:07:23 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 02:07:26 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2
+  Rendered materials/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/materials/5" for 127.0.0.1 at 2014-12-01 02:07:34 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.7ms)
