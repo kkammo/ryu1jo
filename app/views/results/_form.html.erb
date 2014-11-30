@@ -11,11 +11,42 @@
     </div>
   <% end %>
 
+<div>
+  <h2>
+    <%= @material.subject %>
+  </h2>
+</div>
+
+<div>
+  <h4>
+    <%= @material.field %>
+  </h4>
+  <p>
+    <%= @material.created_at.strftime("%H:%M / %d %b. %Y") %>
+  </p>
+</div>
+
+<div>
+  <text>
+    <%= @material.content %>
+  </text>
+</div>
+<br>
+<%= '---------------------------------------------' %>
+<br>
+
   <div class="actions">
     <%= f.label '평가 점수' %><br>
     <%= f.number_field :value %>
   </div>
+  <div class="invisible">
+    <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    <%= f.number_field :rater_id, :value => current_developer.id %>
+    <%= f.number_field :evaluation_id, :value => params[:evaluation_id] %>
+    <%= f.number_field :material_id, :value => @material.id %>
 
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

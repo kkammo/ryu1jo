@@ -12,7 +12,7 @@ Home!
     <% @jobs.each do |job| %>
       <tr style="background-color: ghostwhite">
         <td>
-          <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+          <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id, :evaluation_id => @eval.id) %>
         </td>
       </tr>
     <% end %>

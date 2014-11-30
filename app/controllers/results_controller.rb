@@ -25,20 +25,15 @@ class ResultsController < ApplicationController
 
   # POST /results
   def create
-    @material = Material.find(params[:material_id])
-    if @material
-      @result = @material.result.new(result_params)
-      @result.material_id = @material.id
-      @result.ratee_id = @material.developer_id
-      @result.rater_id = current_developer.id
-      @result.value *= @material.prate
+    @material = Material.find(params[:result][:material_id])
+    @result = Result.new(result_params)
+    @result.value *= @material.prate
 
-      respond_to do |format|
-        if @result.save
-          format.html { redirect_to @result, notice: 'Result was successfully created.' }
-        else
-        format.html { render :new }
-        end
+    respond_to do |format|
+      if @result.save
+        format.html { redirect_to @result, notice: 'Result was successfully created.' }
+      else
+        format.html { redirect_to new_result_path(:material_id => params[:result][:material_id], :evaluation_id => params[:result][:evaluation_id])}
       end
     end
   end
@@ -49,6 +44,6 @@ class ResultsController < ApplicationController
     end
 
     def result_params
-      params.require(:result).permit(:value)
+      params.require(:result).permit(:value, :ratee_id, :rater_id, :evaluation_id, :material_id)
     end
 end

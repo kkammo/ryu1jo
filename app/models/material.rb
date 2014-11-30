@@ -3,4 +3,6 @@ class Material < ActiveRecord::Base
   has_one :result
 
   validates_presence_of :developer
+
+  enum field: {web: 0, ios: 1, android: 2, windows: 3, embeded: 4}
 end

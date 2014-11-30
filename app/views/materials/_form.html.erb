@@ -15,10 +15,35 @@
     <%= f.label '제목' %><br>
     <%= f.text_field :subject %>
   </div>
-
+  <br>
   <div class="actions">
     <%= f.label '분야' %><br>
-    <%= f.number_field :field %>
+    <div class="radio" >
+      <label style="padding-right: 20px">
+        <input type="radio" name="material[field]" id="material_field" value="web" checked>
+          web
+      </label>
+          
+      <label style="padding-right: 20px">
+        <input type="radio" name="material[field]" id="material_field" value="ios" >
+          ios
+      </label>
+
+      <label style="padding-right: 20px">
+        <input type="radio" name="material[field]" id="material_field" value="android" >
+          android
+      </label>
+
+      <label style="padding-right: 20px">
+        <input type="radio" name="material[field]" id="material_field" value="windows" >
+          windows
+      </label>
+
+      <label style="padding-right: 20px">
+        <input type="radio" name="material[field]" id="material_field" value="embeded" >
+          embeded
+      </label>
+    </div>
   </div>
 
   <div class="actions">

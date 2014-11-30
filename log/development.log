@@ -20158,3 +20158,2227 @@ Processing by ResultsController#new as HTML
   Rendered results/_form.html.erb (3.9ms)
   Rendered results/new.html.erb within layouts/application (6.3ms)
 Completed 200 OK in 94ms (Views: 81.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (14.0ms)
+  Rendered results/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 101ms (Views: 97.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:20:46 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.8ms)
+  Rendered results/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:21 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (3.0ms)
+  Rendered results/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:21:30 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.7ms)
+  Rendered results/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:06 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.6ms)
+  Rendered results/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:22:16 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.3ms)
+  Rendered results/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 72.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:24:17 +0900
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "materials" SET "field" = $1, "updated_at" = $2 WHERE "materials"."id" = 1  [["field", 10], ["updated_at", "2014-11-30 15:30:34.770861"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mMaterial Load (0.7ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:31:31 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.0ms)
+  Rendered results/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 118ms (Views: 88.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:32 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.5ms)
+  Rendered results/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:31:33 +0900
+  [1m[35mMaterial Load (0.5ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Load (1.0ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mMaterial Load (0.5ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Load (0.7ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "materials" SET "field" = $1, "updated_at" = $2 WHERE "materials"."id" = 1  [["field", 0], ["updated_at", "2014-11-30 15:35:04.080349"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "materials" SET "field" = $1, "updated_at" = $2 WHERE "materials"."id" = 1[0m  [["field", 1], ["updated_at", "2014-11-30 15:35:11.608909"]]
+  [1m[35m (8.4ms)[0m  COMMIT
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (1.1ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.9ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (24.7ms)
+  Rendered results/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 232ms (Views: 141.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:35:41 +0900
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mRateeGroup Load (0.7ms)[0m  SELECT  "ratee_groups".* FROM "ratee_groups"  WHERE "ratee_groups"."id" = 1 LIMIT 1
+  [1m[36mRaterGroup Load (0.5ms)[0m  [1mSELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 1 LIMIT 1[0m
+  [1m[35mEvaluation Load (0.5ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "results" ("created_at", "evaluation_id", "material_id", "ratee_id", "rater_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-11-30 15:39:13.564402"], ["evaluation_id", 1], ["material_id", 1], ["ratee_id", 1], ["rater_id", 1], ["updated_at", "2014-11-30 15:39:13.564402"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "results" SET "updated_at" = $1, "value" = $2 WHERE "results"."id" = 1[0m  [["updated_at", "2014-11-30 15:39:20.260605"], ["value", 10]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:40:38 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.6ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:40:47 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.6ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (13.4ms)
+  Rendered results/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 130ms (Views: 109.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:43:01 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:44:28 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:44:41 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:44:48 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (4.7ms)
+  Rendered results/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:45:07 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:45:10 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:46:00 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (1.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.6ms)
+  Rendered results/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.4ms)
+  Rendered results/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:46:01 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:46:03 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:47:12 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (3.8ms)
+  Rendered results/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:47:12 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.3ms)
+  Rendered results/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:47:13 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (1.9ms)
+  Rendered results/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:47:14 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:47:16 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"2"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:13 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (4.3ms)
+  Rendered results/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 121ms (Views: 72.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.2ms)
+  Rendered results/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:14 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:48:16 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"2"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:30 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (3.1ms)
+  Rendered results/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.8ms)
+  Rendered results/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:31 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:48:33 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"2"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:35 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.6ms)
+  Rendered results/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 89ms (Views: 84.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:48:47 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.5ms)
+  Rendered results/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 89ms (Views: 84.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 00:48:48 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:48:51 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 00:49:50 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `result' for nil:NilClass):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:56:44 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (5.1ms)
+  Rendered results/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85d008bbe8>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106299185940'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 00:56:44 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.8ms)
+  Rendered results/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85cfc21300>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106349136200'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:05 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:05 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:19 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:34 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.3ms)
+
+
+Started GET "/evaluations/1/map?utf8=%E2%9C%93&map=3&map=2" for 127.0.0.1 at 2014-12-01 01:24:37 +0900
+Processing by EvaluationsController#map as HTML
+  Parameters: {"utf8"=>"✓", "map"=>"2", "id"=>"1"}
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:38 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:39 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.1ms)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:24:44 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:46 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106331315160'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:46 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:24:59 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @jobs.each do |job| %>
+    13:       <tr style="background-color: ghostwhite">
+    14:         <td>
+    15:           <%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id) %>
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___2814789367726576594_70106329041220'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.5ms)
+  [1m[36mEvaluation Load (0.5ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  [1m[35mEvaluation Load (0.6ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "evaluations" SET "appliable" = $1, "updated_at" = $2 WHERE "evaluations"."id" = 1  [["appliable", "f"], ["updated_at", "2014-11-30 16:26:00.678862"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1[0m
+  [1m[35mSelected Load (0.5ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "mappings"  WHERE "mappings"."rater_group_id" = 1) subquery_for_count[0m
+  [1m[35mMapping Load (0.4ms)[0m  SELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1
+  [1m[36mApplied Load (0.8ms)[0m  [1mSELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 49.6ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:26:03 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT "evaluations".* FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1
+  [1m[36mSelected Load (0.6ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "mappings"  WHERE "mappings"."rater_group_id" = 1) subquery_for_count
+  [1m[36mMapping Load (0.3ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.3ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 130ms (Views: 60.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:27:08 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 01:27:56 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.6ms)
+  Rendered results/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85d013fcd8>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106299185940'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 01:27:56 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (3.3ms)
+  Rendered results/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85cfd6ab08>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106349136200'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+Processing by HomeController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1[0m
+  [1m[35mSelected Load (0.2ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "mappings"  WHERE "mappings"."rater_group_id" = 1) subquery_for_count[0m
+  [1m[35mMapping Load (0.2ms)[0m  SELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1
+  [1m[36mApplied Load (0.2ms)[0m  [1mSELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 61.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:06 +0900
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:28:08 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (1.8ms)
+  Rendered results/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85d06258d8>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106348128960'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106299185940'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.8ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:28:08 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.1ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.7ms)
+  Rendered results/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `evaluation_id' for #<Material:0x007f85d07b32b8>):
+    42:   <div class="invisible">
+    43:     <%= f.number_field :ratee_id, :value => @material.developer_id %>
+    44:     <%= f.number_field :rater_id, :value => current_developer.id %>
+    45:     <%= f.number_field :evaluation_id, :value => @material.evaluation_id %>
+    46:     <%= f.number_field :material_id, :value => @material.id %>
+    47: 
+    48:   </div>
+  app/views/results/_form.html.erb:45:in `block in _app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/_form.html.erb:1:in `_app_views_results__form_html_erb__3647261632075049414_70106346442800'
+  app/views/results/new.html.erb:3:in `_app_views_results_new_html_erb___258305991348659324_70106349136200'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.9ms)
+  Rendered results/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:28:43 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:28:49 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Material without an ID):
+  app/controllers/results_controller.rb:28:in `create'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:30:17 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRateeGroup Load (0.6ms)[0m  [1mSELECT  "ratee_groups".* FROM "ratee_groups"  WHERE "ratee_groups"."id" = 1 LIMIT 1[0m
+  [1m[35mRaterGroup Load (0.4ms)[0m  SELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 2 LIMIT 1
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered results/_form.html.erb (2.5ms)
+  Rendered results/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 152ms (Views: 62.8ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:30:18 +0900
+  [1m[35mSelected Load (0.9ms)[0m  SELECT "selecteds".* FROM "selecteds"
+  [1m[36mResult Load (0.7ms)[0m  [1mSELECT "results".* FROM "results"[0m
+  [1m[35mResult Load (0.6ms)[0m  SELECT "results".* FROM "results"
+  [1m[36mSQL (8.8ms)[0m  [1mDELETE FROM "results" WHERE "results"."id" = 1[0m
+  [1m[35mResult Load (0.5ms)[0m  SELECT "results".* FROM "results"
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRateeGroup Load (0.3ms)[0m  [1mSELECT  "ratee_groups".* FROM "ratee_groups"  WHERE "ratee_groups"."id" = 1 LIMIT 1[0m
+  [1m[35mRaterGroup Load (0.2ms)[0m  SELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 2 LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered results/_form.html.erb (3.5ms)
+  Rendered results/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:19 +0900
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:32:34 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (4.0ms)
+  Rendered results/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 83ms (Views: 78.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"7", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.1ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRateeGroup Load (0.3ms)[0m  SELECT  "ratee_groups".* FROM "ratee_groups"  WHERE "ratee_groups"."id" = 1 LIMIT 1
+  [1m[36mRaterGroup Load (0.3ms)[0m  [1mSELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 2 LIMIT 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered results/_form.html.erb (2.8ms)
+  Rendered results/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 81ms (Views: 71.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:45 +0900
+
+
+Started GET "/results" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:32:51 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"3", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.1ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "results" ("created_at", "evaluation_id", "material_id", "ratee_id", "rater_id", "updated_at", "value") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-11-30 16:34:17.535644"], ["evaluation_id", 1], ["material_id", 1], ["ratee_id", 1], ["rater_id", 2], ["updated_at", "2014-11-30 16:34:17.535644"], ["value", 3]]
+  [1m[35m (8.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/results/2
+Completed 302 Found in 58ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/results/2" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered results/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:17 +0900
+
+
+Started GET "/results/new?material_id=1" for 127.0.0.1 at 2014-12-01 01:34:21 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"material_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.2ms)
+  Rendered results/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 104.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/results" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:34:22 +0900
+
+
+Started GET "/results/2" for 127.0.0.1 at 2014-12-01 01:34:24 +0900
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered results/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-12-01 01:34:25 +0900
+Processing by ResultsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"
+  Rendered results/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.7ms)
+  [1m[36mResult Load (0.5ms)[0m  [1mSELECT "results".* FROM "results"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 01:35:06 +0900
+Processing by HomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT "evaluations".* FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1
+  [1m[36mSelected Load (0.3ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2 AND "selecteds"."evaluation_id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "mappings"  WHERE "mappings"."rater_group_id" = 1) subquery_for_count
+  [1m[36mMapping Load (0.3ms)[0m  [1mSELECT "mappings".* FROM "mappings"  WHERE "mappings"."rater_group_id" = 1[0m
+  [1m[35mApplied Load (0.3ms)[0m  SELECT "applieds".* FROM "applieds"  WHERE "applieds"."ratee_group_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 86ms (Views: 58.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:35:27 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (2.1ms)
+  Rendered results/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"100", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mEvaluation Load (0.4ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered results/_form.html.erb (2.2ms)
+  Rendered results/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:35:32 +0900
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:36:11 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.0ms)
+  Rendered results/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 75ms (Views: 71.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/_form.html.erb (2.3ms)
+  Rendered results/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 150ms (Views: 118.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:31 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"12120", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered results/_form.html.erb (2.8ms)
+  Rendered results/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 109ms (Views: 83.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:37:36 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"12120", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered results/_form.html.erb (4.3ms)
+  Rendered results/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 98ms (Views: 56.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:08 +0900
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:39:14 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[35mDeveloper Load (1.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.7ms)
+  Rendered results/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 104ms (Views: 96.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"14124", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered results/_form.html.erb (2.9ms)
+  Rendered results/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 68.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:39:21 +0900
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:39:39 +0900
+
+SyntaxError (/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:36: syntax error, unexpected '(', expecting '}'
+...     format.html { render :new(:material_id => params[:resul...
+...                               ^
+/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:36: syntax error, unexpected =>, expecting :: or '[' or '.'
+...material_id], :evaluation_id => params[:result][:evaluation_...
+...                               ^
+/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:36: syntax error, unexpected ')', expecting '}'
+...arams[:result][:evaluation_id])}
+...                               ^
+/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:49: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/results_controller.rb:36: syntax error, unexpected '(', expecting '}'
+  app/controllers/results_controller.rb:36: syntax error, unexpected =>, expecting :: or '[' or '.'
+  app/controllers/results_controller.rb:36: syntax error, unexpected ')', expecting '}'
+  app/controllers/results_controller.rb:49: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started POST "/results" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+Processing by ResultsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skXz3ie8sAYtr9xr0H205ODSxxk5dMBhy9zNAqZnio8=", "result"=>{"value"=>"12120", "ratee_id"=>"1", "rater_id"=>"2", "evaluation_id"=>"1", "material_id"=>"1"}, "commit"=>"Create Result"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.1ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = 1 LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/results/new?evaluation_id=1&material_id=1
+Completed 302 Found in 46ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+Processing by ResultsController#new as HTML
+  Parameters: {"evaluation_id"=>"1", "material_id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/_form.html.erb (1.9ms)
+  Rendered results/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 01:40:39 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 02:04:46 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  Rendered evaluations/index.html.erb within layouts/application (5.5ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 63.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 02:04:47 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2[0m
+  Rendered materials/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 70ms (Views: 62.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/materials/new" for 127.0.0.1 at 2014-12-01 02:04:49 +0900
+Processing by MaterialsController#new as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/_form.html.erb (3.4ms)
+  Rendered materials/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/materials/new" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+Processing by MaterialsController#new as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered materials/_form.html.erb (15.6ms)
+  Rendered materials/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:14 +0900
+
+
+Started GET "/materials/new" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+Processing by MaterialsController#new as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered materials/_form.html.erb (3.8ms)
+  Rendered materials/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 02:05:38 +0900

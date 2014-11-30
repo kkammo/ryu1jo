@@ -1,4 +1,28 @@
+<body>
 <p id="notice"><%= notice %></p>
+
+<div>
+	<h2>
+		<%= @material.subject %>
+	</h2>
+</div>
+
+<div>
+	<h4>
+		<%= @material.field %>
+	</h4>
+	<p>
+		<%= @material.created_at.strftime("%H:%M / %d %b. %Y") %>
+	</p>
+</div>
+
+<div>
+	<text>
+		<%= @material.content %>
+	</text>
+</div>
+
 
 <br>
 <%= link_to 'Back', materials_path %>
+</body>
