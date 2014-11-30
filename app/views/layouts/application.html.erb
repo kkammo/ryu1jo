@@ -5,6 +5,54 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to "전문가관리시스템", root_path %>
+  </div>
+  
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+    <ul class="nav navbar-nav navbar-left">
+    	<li>
+          <%= link_to '평가', evaluations_path %>
+        </li>
+        <li>
+          <%= link_to '자료', materials_path %>
+        </li>
+        <li>
+          <%= link_to '회사', companies_path %>
+        </li>
+       
+
+      <% if developer_signed_in? %>
+        <li>
+          <%= link_to current_developer.id %>
+        </li>
+        <li style ='padding-right: 14px'> 
+          <%= link_to "Sign out", destroy_developer_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign up", new_developer_registration_path %>
+        </li>
+        <li style ='padding-right: 14px'>
+          <%= link_to "Sign in", new_developer_session_path %>
+        </li>
+      <% end %>
+    </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+
+
+
 </head>
 <body>
 

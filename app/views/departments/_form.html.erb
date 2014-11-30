@@ -1,4 +1,4 @@
-<%= form_for(@department) do |f| %>
+<%= form_for([@company, @company.departments.build]) do |f| %>
   <% if @department.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@department.errors.count, "error") %> prohibited this department from being saved:</h2>
@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="actions">
+    <%= f.label '부서 이름' %><br>
+    <%= f.text_field :dname %>
+  </div>  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,17 +1,8 @@
 <h2>
 	<%= @evaluation.id %>차 평가
 </h2>
-<!--
-  <table class="table table-condensed">
-    <% @evaluation.mappings.each do |mapping| %>
-      <tr>
-        <td><%= link_to 'n', mapping_path(mapping) %></td>
-        <td></td>
-      </tr>
-    <% end %>
-  </table>
--->
 
+<% unless @evaluation.mappings %>
 <%= form_tag map_evaluation_path(@evaluation), :method => 'get', :role => 'map'  do %>
 	<div>
 		각 피평가 그룹의 사람 수
@@ -25,4 +16,6 @@
         매핑하기
 	</button>
 <% end %>
-<%= puts params %>
+<% else %>
+	<%= render 'mappings/index' %>
+<% end %>

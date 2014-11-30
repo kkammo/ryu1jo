@@ -1,19 +1,25 @@
 Rails.application.routes.draw do
-  get 'admin/index'
-
-  devise_for :developers
-
   root :to => "home#index"
 
-  resources :evaluations do
-    resources :mappings
-    get "map", on: :member
+  get 'admin'  => 'admin#index'
+
+  devise_for :developers do
+    get '/developers/sign_out' => 'devise/sessions#destroy'
   end
+
   resources :materials
+
+  resources :evaluations do
+    get "map", on: :member
+    resources :materials
+    resources :results
+    resources :mappings, only: [:index, :show]
+  end
+  resources :mappings, only: [:index, :show]
   resources :results
   
-  resources :companies do
-    resources :departments
+  resources :companies, param: :name do
+    resources :departments, param: :dname_cname
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

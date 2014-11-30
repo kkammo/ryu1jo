@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 20141129004858) do
   add_index "applieds", ["evaluation_id"], name: "index_applieds_on_evaluation_id", using: :btree
   add_index "applieds", ["ratee_group_id"], name: "index_applieds_on_ratee_group_id", using: :btree
 
-  create_table "companies", primary_key: "name", force: true do |t|
+  create_table "companies", id: false, force: true do |t|
+    t.string "name", null: false
   end
 
   add_index "companies", ["name"], name: "index_companies_on_name", unique: true, using: :btree

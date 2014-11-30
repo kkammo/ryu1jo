@@ -12,16 +12,16 @@ c1 = Company.create! :name => "freelancer"
 # user = User.create! :student_id => '001234', :user_name => 'admin', :email => 'admin@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :permit => true, :role => 'admin'
 puts 'New user created: ' << c1.name
 
-u1 = Developer.create! :email => 'student1@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u2 = Developer.create! :email => 'student2@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u3 = Developer.create! :email => 'student3@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u4 = Developer.create! :email => 'student4@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u5 = Developer.create! :email => 'student5@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u6 = Developer.create! :email => 'student6@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u7 = Developer.create! :email => 'student7@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u8 = Developer.create! :email => 'student8@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u9 = Developer.create! :email => 'student9@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
-u10 = Developer.create! :email => 'student10@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name
+u1 = Developer.create! :email => 'student1@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이1"
+u2 = Developer.create! :email => 'student2@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이2"
+u3 = Developer.create! :email => 'student3@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이3"
+u4 = Developer.create! :email => 'student4@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이4"
+u5 = Developer.create! :email => 'student5@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이5"
+u6 = Developer.create! :email => 'student6@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이6"
+u7 = Developer.create! :email => 'student7@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이7"
+u8 = Developer.create! :email => 'student8@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이8"
+u9 = Developer.create! :email => 'student9@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이9"
+u10 = Developer.create! :email => 'student10@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이10"
 
 e = Evaluation.create!
 

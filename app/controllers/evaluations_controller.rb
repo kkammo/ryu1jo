@@ -1,4 +1,6 @@
 class EvaluationsController < ApplicationController
+  # before_filter :require_sign_in
+  # before_filter :require_admin, only: [:new, :create, :map]
 
 	def index
 		@evaluations = Evaluation.all
@@ -6,6 +8,7 @@ class EvaluationsController < ApplicationController
 
 	def show
 		@evaluation = Evaluation.find(params[:id])
+    @mappings = @evaluation.mappings
 	end
 
 	def new
