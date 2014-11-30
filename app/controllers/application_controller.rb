@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   # 유저의 로그인 여부 확인
-  def require_log_in
+  def require_sign_in
     unless current_developer
       redirect_to root_path
       flash[:sign_in] = "로그인이 필요합니다."

@@ -1,10 +1,10 @@
 class MaterialsController < ApplicationController
   before_action :set_material, only: [:show, :destroy]
-  # before_filter :require_sign_in
+  before_filter :require_sign_in
 
   # GET /materials
   def index
-    @materials = Material.all
+    @materials = current_developer.materials
   end
 
   # GET /materials/1
@@ -13,12 +13,13 @@ class MaterialsController < ApplicationController
 
   # GET /materials/new
   def new
-    @material = Material.new
+
+    @material = current_developer.materials.new
   end
 
   # POST /materials
   def create
-    @material = Material.new(material_params)
+    @material = current_developer.materials.new(material_params)
 
     respond_to do |format|
       if @material.save
@@ -44,6 +45,6 @@ class MaterialsController < ApplicationController
     end
 
     def material_params
-      params.require(:material).permit(:subject, :content, :field, :developer_id, :prate)
+      params.require(:material).permit(:subject, :content, :field, :prate)
     end
 end

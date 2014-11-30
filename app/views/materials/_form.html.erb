@@ -12,6 +12,26 @@
   <% end %>
 
   <div class="actions">
+    <%= f.label '제목' %><br>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div class="actions">
+    <%= f.label '분야' %><br>
+    <%= f.number_field :field %>
+  </div>
+
+  <div class="actions">
+    <%= f.label '참여도' %><br>
+    <%= f.number_field :prate %>
+  </div>
+
+  <div class="actions">
+    <%= f.label '내용' %><br>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
