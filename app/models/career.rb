@@ -1,6 +1,4 @@
-class Material < ActiveRecord::Base
+class Career < ActiveRecord::Base
   belongs_to :developer
-  has_one :result
-
   validates_presence_of :developer
 end

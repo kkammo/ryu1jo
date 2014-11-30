@@ -7,4 +7,6 @@ class Mapping < ActiveRecord::Base
   belongs_to :ratee_group
   belongs_to :rater_group
   belongs_to :evaluation
+
+  validates_presence_of :rater_group, :ratee_group, :evaluation
 end

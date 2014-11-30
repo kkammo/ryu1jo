@@ -31,7 +31,7 @@ class DeviseCreateDevelopers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.string :name
-      t.string :cname, null: false
+      t.string :cname, null: false, default: "freelancer"
       t.string :dname
 
       t.boolean :admin, null: false, default: false

@@ -12,5 +12,8 @@ class Developer < ActiveRecord::Base
   has_many :results, foreign_key: :ratee_id
   has_many :results, foreign_key: :rater_id
   has_many :materials
+  has_many :careers
+
+  validates_presence_of :company
 
 end

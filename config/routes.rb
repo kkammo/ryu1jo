@@ -26,6 +26,9 @@ Rails.application.routes.draw do
     resources :departments, param: :dname_cname
   end
 
+  get 'careers/change_company' => 'career#change_company'
+  get 'careers/change_department' => 'career#change_department'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

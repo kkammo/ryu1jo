@@ -21,6 +21,21 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cname %><br />
+    <%= f.text_field :cname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dname %><br />
+    <%= f.text_field :dname %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

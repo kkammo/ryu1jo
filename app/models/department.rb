@@ -6,6 +6,8 @@ class Department < ActiveRecord::Base
 	belongs_to :company, foreign_key: :cname, primary_key: :name
 	has_many :developers, foreign_key: [:dname, :cname], primary_key: [:dname, :cname]
 
+	validates_presence_of :company
+
 	# validate :Company_name_exists
 
 	# def Company_name_exists

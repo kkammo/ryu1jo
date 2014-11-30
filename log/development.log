@@ -15262,3 +15262,2294 @@ Processing by Devise::RegistrationsController#new as HTML
   Rendered devise/shared/_links.html.erb (0.4ms)
   Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
 Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/sign_in" for 127.0.0.1 at 2014-11-30 16:16:33 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 72ms (Views: 59.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKNFlA5bjMXy/xlvfrO55l9jtqEqMAZVgBya4ozwKD4=", "developer"=>{"email"=>"student1@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."email" = 'student1@ex.com'  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = 1[0m  [["current_sign_in_at", "2014-11-30 07:16:47.692066"], ["last_sign_in_at", "2014-11-30 06:56:34.459440"], ["sign_in_count", 3], ["updated_at", "2014-11-30 07:16:47.693419"]]
+  [1m[35m (8.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:47 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:49 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:16:51 +0900
+
+
+Started GET "/users" for 127.0.0.1 at 2014-11-30 16:16:53 +0900
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-11-30 16:16:56 +0900
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-11-30 16:16:57 +0900
+
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.9ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:17:10 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:18:51 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:19:02 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-11-30 16:19:03 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  Rendered evaluations/index.html.erb within layouts/application (6.1ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 70ms (Views: 61.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-11-30 16:19:05 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (0.4ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 56.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:19:07 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-11-30 16:19:08 +0900
+Processing by AdminController#developers as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered admin/developers.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 16:19:10 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies"
+  Rendered companies/index.html.erb within layouts/application (3.2ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 62ms (Views: 54.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 16:19:11 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered materials/index.html.erb within layouts/application (14.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 77ms (Views: 70.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/materials/2" for 127.0.0.1 at 2014-11-30 16:19:13 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered materials/show.html.erb within layouts/application (0.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 16:19:17 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered materials/index.html.erb within layouts/application (6.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/materials/2" for 127.0.0.1 at 2014-11-30 16:19:18 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered materials/show.html.erb within layouts/application (0.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 16:19:19 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered materials/index.html.erb within layouts/application (6.7ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/materials/3" for 127.0.0.1 at 2014-11-30 16:19:20 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered materials/show.html.erb within layouts/application (0.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:19:22 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:09 +0900
+
+
+Started GET "/directory_semesters" for 127.0.0.1 at 2014-11-30 16:21:11 +0900
+
+ActionController::RoutingError (No route matches [GET] "/directory_semesters"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:17 +0900
+
+
+Started GET "/directory_semesters" for 127.0.0.1 at 2014-11-30 16:21:20 +0900
+
+ActionController::RoutingError (No route matches [GET] "/directory_semesters"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:21 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:23 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:21:24 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:22:02 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 89ms (Views: 87.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:33:58 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..3)):
+    34: 
+    35:   <div class="field">
+    36:     <%= f.label :cname %><br />
+    37:     <%= text_field :cname %>
+    38:   </div>
+    39: 
+    40:   <div class="field">
+  app/views/devise/registrations/edit.html.erb:37:in `block in _app_views_devise_registrations_edit_html_erb___2390896021330076795_70193130796920'
+  app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___2390896021330076795_70193130796920'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:34:04 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (44.3ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `text' for #<#<Class:0x007fae3b2b1150>:0x007fae3b068e70>):
+    34: 
+    35:   <div class="field">
+    36:     <%= f.label :cname %><br />
+    37:     <%= text :cname %>
+    38:   </div>
+    39: 
+    40:   <div class="field">
+  app/views/devise/registrations/edit.html.erb:37:in `block in _app_views_devise_registrations_edit_html_erb___2390896021330076795_70193145650400'
+  app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___2390896021330076795_70193145650400'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:34:34 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/moya/Documents/se/evalsystem/app/views/devise/registrations/edit.html.erb:37: syntax error, unexpected ')', expecting :: or '[' or '.'
+..._buffer.append=( text, :cname );@output_buffer.safe_append='
+...                               ^
+/Users/moya/Documents/se/evalsystem/app/views/devise/registrations/edit.html.erb:48: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/moya/Documents/se/evalsystem/app/views/devise/registrations/edit.html.erb:56: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/moya/Documents/se/evalsystem/app/views/devise/registrations/edit.html.erb:58: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/devise/registrations/edit.html.erb:37: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/devise/registrations/edit.html.erb:48: syntax error, unexpected keyword_end, expecting ')'
+  app/views/devise/registrations/edit.html.erb:56: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/devise/registrations/edit.html.erb:58: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:34:40 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `text' for #<#<Class:0x007fae3b2b1150>:0x007fae3b4b0c08>):
+    34: 
+    35:   <div class="field">
+    36:     <%= f.label :cname %><br />
+    37:     <%= text :cname %>
+    38:   </div>
+    39: 
+    40:   <div class="field">
+  app/views/devise/registrations/edit.html.erb:37:in `block in _app_views_devise_registrations_edit_html_erb___2390896021330076795_70193147894840'
+  app/views/devise/registrations/edit.html.erb:3:in `_app_views_devise_registrations_edit_html_erb___2390896021330076795_70193147894840'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:34:57 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:13 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:35:28 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:07 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:32 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:36:43 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:37:18 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 73ms (Views: 70.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:19 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:37:20 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:02 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:32 +0900
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 16:38:45 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 17:15:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 17:15:53 +0900
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCareers (20141130080409)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "careers" ("id" serial primary key, "developer_id" integer, "prev" character varying(255), "current" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_careers_on_developer_id" ON "careers"  ("developer_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141130080409"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 17:16:18 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (1.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 36ms
+
+NoMethodError (undefined method `edit_developer_registration' for #<HomeController:0x007fdccd5a7498>):
+  app/controllers/home_controller.rb:5:in `index'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 17:16:47 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.7ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 341ms (Views: 336.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 17:16:48 +0900
+  [1m[36mCareer Load (0.7ms)[0m  [1mSELECT "careers".* FROM "careers"[0m
+  [1m[35mDeveloper Load (1.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 2]]
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:01:15 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 104ms (Views: 92.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 18:01:16 +0900
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=12" for 127.0.0.1 at 2014-11-30 18:01:21 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"12"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Developer without an ID):
+  app/controllers/career_controller.rb:4:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=12" for 127.0.0.1 at 2014-11-30 18:01:54 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"12"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Developer without an ID):
+  app/controllers/career_controller.rb:4:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=12" for 127.0.0.1 at 2014-11-30 18:03:19 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"12"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Developer without an ID):
+  app/controllers/career_controller.rb:4:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:03:27 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 99ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:03:29 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.3ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "123"]]
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Company with 'name'=123):
+  app/controllers/career_controller.rb:6:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:04:36 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "\#{params[:new_company]}"]]
+Completed 404 Not Found in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Company with 'name'=#{params[:new_company]}):
+  app/controllers/career_controller.rb:6:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:04:43 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "params[:new_company]"]]
+Completed 404 Not Found in 23ms
+
+ActiveRecord::RecordNotFound (Couldn't find Company with 'name'=params[:new_company]):
+  app/controllers/career_controller.rb:6:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:04:47 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "123"]]
+Completed 404 Not Found in 17ms
+
+ActiveRecord::RecordNotFound (Couldn't find Company with 'name'=123):
+  app/controllers/career_controller.rb:6:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", 123]]
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:05:50 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCompany Load (0.2ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "123"]]
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find Company with 'name'=123):
+  app/controllers/career_controller.rb:6:in `change_company'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=123&developer_id=1" for 127.0.0.1 at 2014-11-30 18:06:56 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "careers" ("created_at", "current", "developer_id", "prev", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 09:06:56.967027"], ["current", "123"], ["developer_id", 1], ["prev", "freelancer"], ["updated_at", "2014-11-30 09:06:56.967027"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "developers" SET "cname" = $1, "updated_at" = $2 WHERE "developers"."id" = 1  [["cname", "123"], ["updated_at", "2014-11-30 09:06:56.974492"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 55ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:06:56 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 18:06:57 +0900
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT "companies".* FROM "companies"  WHERE "companies"."name" = 123[0m
+PG::UndefinedFunction: ERROR:  operator does not exist: character varying = integer
+LINE 1: ...ompanies".* FROM "companies"  WHERE "companies"."name" = 123
+                                                                  ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+: SELECT "companies".* FROM "companies"  WHERE "companies"."name" = 123
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:37 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:08:38 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-11-30 18:08:40 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  Rendered evaluations/index.html.erb within layouts/application (6.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 114ms (Views: 92.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:08:41 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=1234&developer_id=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"1234", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "careers" ("created_at", "current", "developer_id", "prev", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-30 09:08:45.130542"], ["current", "1234"], ["developer_id", 1], ["prev", "123"], ["updated_at", "2014-11-30 09:08:45.130542"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "developers" SET "cname" = $1, "updated_at" = $2 WHERE "developers"."id" = 1[0m  [["cname", "1234"], ["updated_at", "2014-11-30 09:08:45.141601"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 19ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 18:08:45 +0900
+  [1m[35mDeveloper Load (1.3ms)[0m  SELECT "developers".* FROM "developers"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "developers" SET "cname" = $1, "updated_at" = $2 WHERE "developers"."id" = 5  [["cname", "nefefefef"], ["updated_at", "2014-11-30 09:09:38.337454"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mDepartment Load (0.6ms)[0m  SELECT "departments".* FROM "departments"
+  [1m[36mDepartment Load (0.5ms)[0m  [1mSELECT "departments".* FROM "departments"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "departments" SET "cname" = $1 WHERE ("departments"."dname" = '501호' AND "departments"."cname" = '경선파인')[0m  [["cname", "qwqwqw"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36mCareer Load (0.8ms)[0m  [1mSELECT "careers".* FROM "careers"[0m
+  [1m[35mCareer Load (0.6ms)[0m  SELECT "careers".* FROM "careers"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "careers" SET "developer_id" = $1, "updated_at" = $2 WHERE "careers"."id" = 1  [["developer_id", 10000], ["updated_at", "2014-11-30 09:14:54.709983"]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "careers" ("created_at", "developer_id", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-11-30 09:20:39.317938"], ["developer_id", 10000000], ["updated_at", "2014-11-30 09:20:39.317938"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "departments" ("cname", "dname") VALUES ($1, $2) RETURNING "dname","cname"  [["cname", "asff"], ["dname", "asd"]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mCareer Load (0.6ms)[0m  [1mSELECT "careers".* FROM "careers"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Load (1.1ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1000 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT "companies".* FROM "companies"  WHERE "companies"."name" = '123'[0m
+  [1m[35mCompany Load (0.7ms)[0m  SELECT "companies".* FROM "companies"  WHERE "companies"."name" = '123'
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '123'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '123'
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '123'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '123'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '123'[0m
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=1234&developer_id=1" for 127.0.0.1 at 2014-11-30 19:10:19 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"1234", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '1234'[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "careers" ("created_at", "current", "developer_id", "prev", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 10:10:20.068031"], ["current", "1234"], ["developer_id", 1], ["prev", "1234"], ["updated_at", "2014-11-30 10:10:20.068031"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = '1234' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 37ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 19:10:20 +0900
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '1234'
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=1234&developer_id=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"1234", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '1234'
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 20ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:10 +0900
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=14214&developer_id=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"14214", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '14214'[0m
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 86.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:14 +0900
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=124214&developer_id=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"124214", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '124214'
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:17 +0900
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=freelancer&developer_id=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"freelancer", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = 'freelancer'[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "careers" ("created_at", "current", "developer_id", "prev", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 10:11:30.298578"], ["current", "freelancer"], ["developer_id", 1], ["prev", "1234"], ["updated_at", "2014-11-30 10:11:30.298578"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = 'freelancer' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "developers" SET "cname" = $1, "updated_at" = $2 WHERE "developers"."id" = 1[0m  [["cname", "freelancer"], ["updated_at", "2014-11-30 10:11:30.314528"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 35ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 19:11:30 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:08:09 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `careers_change_deparment_path' for #<#<Class:0x007fdcd2ddd888>:0x007fdcd2ddcc58>):
+    65:         </button>
+    66:       <% end %>
+    67: 
+    68:       <%= form_tag careers_change_deparment_path(current_developer), :method => 'get', :role => 'change_department'  do %>
+    69:         <div>
+    70:           나의 부서 수정
+    71:           <%= text_field_tag :new_department, params[:new_department] %>
+  app/views/devise/registrations/edit.html.erb:68:in `_app_views_devise_registrations_edit_html_erb__4527433055721552226_70293203613980'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:08:35 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (30.4ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `careers_change_deparment_path' for #<#<Class:0x007fdcce955670>:0x007fdcce954928>):
+    65:         </button>
+    66:       <% end %>
+    67: 
+    68:       <%= form_tag careers_change_deparment_path(current_developer), :method => 'get', :role => 'change_department'  do %>
+    69:         <div>
+    70:           나의 부서 수정
+    71:           <%= text_field_tag :new_department, params[:new_department] %>
+  app/views/devise/registrations/edit.html.erb:68:in `_app_views_devise_registrations_edit_html_erb__4527433055721552226_70293203613980'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:09:54 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (35.8ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (undefined method `careers_change_deparment_path' for #<#<Class:0x007fdcd19abf90>:0x007fdcd19aa2d0>):
+    65:         </button>
+    66:       <% end %>
+    67: 
+    68:       <%= form_tag careers_change_deparment_path(current_developer), :method => 'get', :role => 'change_department'  do %>
+    69:         <div>
+    70:           나의 부서 수정
+    71:           <%= text_field_tag :new_department, params[:new_department] %>
+  app/views/devise/registrations/edit.html.erb:68:in `_app_views_devise_registrations_edit_html_erb__4527433055721552226_70293193037840'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:49 +0900
+
+
+Started GET "/careers/change_department.1?utf8=%E2%9C%93&new_department=123&developer_id=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+Processing by CareerController#change_department as 
+  Parameters: {"utf8"=>"✓", "new_department"=>"123", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "departments"  WHERE "departments"."dname" = '123' AND "departments"."cname" = 'freelancer') subquery_for_count[0m
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:10:55 +0900
+
+
+Started GET "/careers/change_department.1?utf8=%E2%9C%93&new_department=123&developer_id=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+Processing by CareerController#change_department as 
+  Parameters: {"utf8"=>"✓", "new_department"=>"123", "developer_id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "departments"  WHERE "departments"."dname" = '123' AND "departments"."cname" = 'freelancer') subquery_for_count
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:11:02 +0900
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDepartment Load (0.7ms)[0m  SELECT "departments".* FROM "departments"  WHERE "departments"."cname" = '경선파인'
+
+
+Started GET "/careers/change_company.1?utf8=%E2%9C%93&new_company=%EA%B2%BD%EC%84%A0%ED%8C%8C%EC%9D%B8&developer_id=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+Processing by CareerController#change_company as 
+  Parameters: {"utf8"=>"✓", "new_company"=>"경선파인", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "companies"  WHERE "companies"."name" = '경선파인'[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "careers" ("created_at", "current", "developer_id", "prev", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-30 11:12:21.410558"], ["current", "경선파인"], ["developer_id", 1], ["prev", "freelancer"], ["updated_at", "2014-11-30 11:12:21.410558"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = '경선파인' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "developers" SET "cname" = $1, "updated_at" = $2 WHERE "developers"."id" = 1[0m  [["cname", "경선파인"], ["updated_at", "2014-11-30 11:12:21.426439"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 37ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 112ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:21 +0900
+
+
+Started GET "/careers/change_department.1?utf8=%E2%9C%93&new_department=602%ED%98%B8&developer_id=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+Processing by CareerController#change_department as 
+  Parameters: {"utf8"=>"✓", "new_department"=>"602호", "developer_id"=>"1"}
+  [1m[35mDeveloper Load (3.1ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "departments"  WHERE "departments"."dname" = '602호' AND "departments"."cname" = '경선파인') subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "careers" ("created_at", "current", "developer_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-30 11:12:28.703686"], ["current", "602호"], ["developer_id", 1], ["updated_at", "2014-11-30 11:12:28.703686"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = '경선파인' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "developers" SET "dname" = $1, "updated_at" = $2 WHERE "developers"."id" = 1[0m  [["dname", "602호"], ["updated_at", "2014-11-30 11:12:28.708353"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/developers/edit.1
+Completed 302 Found in 22ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 119ms (Views: 115.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:28 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 78ms (Views: 75.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-30 20:12:31 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-11-30 20:13:34 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  Rendered evaluations/index.html.erb within layouts/application (6.1ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 67ms (Views: 58.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 20:13:35 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mMaterial Load (1.0ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered materials/index.html.erb within layouts/application (16.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 100ms (Views: 89.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-11-30 20:13:37 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  Rendered evaluations/index.html.erb within layouts/application (1.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 20:13:38 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered materials/index.html.erb within layouts/application (6.5ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 20:13:40 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (3.7ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 20:13:42 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-11-30 20:13:46 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (3.1ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-11-30 20:13:47 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (1.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 20:13:48 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-11-30 20:13:49 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (1.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 20:13:54 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.5ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 78ms (Views: 77.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-11-30 20:13:55 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (1.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-11-30 20:13:56 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 20:13:59 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered materials/index.html.erb within layouts/application (6.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-11-30 20:14:09 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-30 20:14:13 +0900
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-11-30 20:20:43 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 3 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered materials/index.html.erb within layouts/application (6.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 1.9ms)
