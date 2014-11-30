@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root :to => "home#index"
 
-  get 'admin'  => 'admin#index'
+  get 'admin' => 'admin#index'
+  get 'admin/developers' => 'admin#developers'
+  get 'admin/evaluations' => 'admin#evaluations'
+  get 'admin/evaluations/:id' => 'admin#evaluation'
 
   devise_for :developers do
     get '/developers/sign_out' => 'devise/sessions#destroy'
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :evaluations do
     get "map", on: :member
+    get "apply", on: :member
     resources :materials
     resources :results
     resources :mappings, only: [:index, :show]

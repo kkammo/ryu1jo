@@ -10,7 +10,9 @@
   <tbody>
     <% @materials.each do |material| %>
       <tr>
+        <td><%= material.field %></td>
         <td><%= material.subject %></td>
+        <td><%= material.developer.id %></td>
         <td><%= link_to 'Show', material %></td>
       </tr>
     <% end %>

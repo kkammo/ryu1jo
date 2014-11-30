@@ -1,0 +1,43 @@
+<h2>
+	<%= @evaluation.id %>차 평가
+</h2>
+
+<% unless @evaluation.mappings.count>0 %>
+	<div class="row" style="background-color: white">
+		<div class="col-md-8">
+			지원자 목록(<%= @applieds.count %>명)
+			<table>
+  			<thead>
+    			<tr>
+      			<th colspan="3"></th>
+    			</tr>
+  			</thead>
+
+			  <tbody>
+    			<% @applieds.each do |applied| %>
+      			<tr>
+        			<td><%= applied.developer.id %></td>
+			      </tr>
+		  	  <% end %>
+			  </tbody>
+			</table>
+		</div>
+
+    <div class="col-md-4">
+			<%= form_tag map_evaluation_path(@evaluation), :method => 'get', :role => 'map'  do %>
+				<div>
+					각 피평가 그룹의 사람 수
+					<%= number_field_tag :rateemem, params[:rateemem] %>
+				</div>
+				<div>
+					각 평가자 그룹의 사람 수
+					<%= number_field_tag :ratermem, params[:ratermem] %>
+				</div>
+    		<button type="submit" class="btn btn-warning btn-xs">
+        	매핑하기
+				</button>
+			<% end %>
+		</div>
+<% else %>
+	<%= render 'mappings/index' %>
+<% end %>

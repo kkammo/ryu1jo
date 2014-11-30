@@ -33,3 +33,10 @@ a5 = e.applieds.create! :developer_id => u5.id
 a6 = e.applieds.create! :developer_id => u6.id
 a7 = e.applieds.create! :developer_id => u7.id
 
+puts 'material created'
+
+m0 = Material.create! :subject => "자료0", :content => "abcdefg", :field => 0, :developer_id => u0.id, :prate => 1
+m1 = Material.create! :subject => "자료1", :content => "abcdefg", :field => 1, :developer_id => u1.id, :prate => 1
+m2 = Material.create! :subject => "자료2", :content => "abcdefg", :field => 2, :developer_id => u2.id, :prate => 1
+m3 = Material.create! :subject => "자료3", :content => "abcdefg", :field => 3, :developer_id => u3.id, :prate => 1
+m4 = Material.create! :subject => "자료4", :content => "abcdefg", :field => 4, :developer_id => u4.id, :prate => 1

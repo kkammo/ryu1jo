@@ -2,20 +2,12 @@
 	<%= @evaluation.id %>차 평가
 </h2>
 
-<% unless @evaluation.mappings %>
-<%= form_tag map_evaluation_path(@evaluation), :method => 'get', :role => 'map'  do %>
-	<div>
-		각 피평가 그룹의 사람 수
-		<%= number_field_tag :rateemem, params[:rateemem] %>
-	</div>
-	<div>
-		각 평가자 그룹의 사람 수
-		<%= number_field_tag :ratermem, params[:ratermem] %>
-	</div>
+<% if @evaluation.appliable %>
+	<%= form_tag apply_evaluation_path(@evaluation), :method => 'get', :role => 'apply'  do %>
     <button type="submit" class="btn btn-warning btn-xs">
-        매핑하기
-	</button>
-<% end %>
+      평가 신청 하기
+		</button>
+	<% end %>
 <% else %>
-	<%= render 'mappings/index' %>
+	<%= '대기중' %>
 <% end %>

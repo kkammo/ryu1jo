@@ -1,0 +1,17 @@
+  <h2>평가 목록</h2>
+  <table class="table table-condensed">
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= link_to evaluation.id, evaluation_path(evaluation) %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </table>
+
+<div class="well well-sm pull-right">
+	<%= form_for :evaluation do |f| %>
+       <p>
+        	<%= f.submit 'NEW', :class=> 'btn btn-info'%>
+       </p>
+	<% end %>
+</div>

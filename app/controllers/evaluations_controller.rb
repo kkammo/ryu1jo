@@ -27,6 +27,22 @@ class EvaluationsController < ApplicationController
     end
   end
 
+  def apply
+    @evaluation = Evaluation.find(params[:id])
+    
+    if Applied.where(evaluation_id: @evaluation.id, developer_id: current_developer.id).nil?
+      @applied = @evaluation.applieds.new
+      @applied.developer_id = current_developer.id
+      if @applied.save
+        redirect_to evaluation_path(@evaluation), notice: '신청이 정상적으로 처리되었습니다.'
+      else
+        redirect_to evaluation_path(@evaluation), notice: '신청이 취소되었습니다.'
+      end
+    else
+      redirect_to evaluation_path(@evaluation), notice: '이미 신청하셨습니다.'
+    end
+  end
+
   def map
   	@evaluation = Evaluation.find(params[:id])
 
