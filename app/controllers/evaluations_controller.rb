@@ -80,81 +80,103 @@ class EvaluationsController < ApplicationController
           @evaluation.rater_groups.create
         end
 
-        applieds = @evaluation.applieds.order("RANDOM()").first(num_of_appliers)
-        selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_appliers/2)
+        #mapping
         rateegroups = @evaluation.ratee_groups
         ratergroups = @evaluation.rater_groups
 
-        #mapping
         for i in 0..(total_ratee_groups-1)
           @evaluation.mappings.create(ratee_group_id: rateegroups[i].id,
            rater_group_id: rateegroups[i%total_rater_groups].id)
         end
 
-        for i in 0..(applieds.count-1)
-          puts "i: #{i}"
-          applieds[i].ratee_group_id = rateegroups[i%total_ratee_groups].id
-          applieds[i].save
-        end
 
-        # algo
-        dev_selector = 0
-        group_selector = 0
-        loop_counter = 0
-        loop do
-          loop_counter += 1
+        # algorithm
 
-          if selecteds[dev_selector%(num_of_appliers/2)].rater_group_id != nil
-            dev_selector += 1
-            next
-          end
+        case_counter = 0
+        begin
 
-          mapped_ratee_group = Mapping.where(rater_group_id: ratergroups[group_selector%total_rater_groups].id)
+          case_counter += 1
 
-          next_dev_flag = false
-
-          for j in 0..(mapped_ratee_group.count-1)
-            mapped_ratee_dev = []
-            for h in 0..(applieds.count-1)
-              if applieds[h].ratee_group_id == mapped_ratee_group[j].ratee_group_id
-                mapped_ratee_dev << applieds[h]
-              end
-            end
-            # mapped_ratee_dev = applieds.where(ratee_group_id: mapped_ratee_group[j].ratee_group_id)
-            for k in 0..(mapped_ratee_dev.count-1)
-              if mapped_ratee_dev[k].developer_id == selecteds[dev_selector%(num_of_appliers/2)].developer_id
-                next_dev_flag = true
-              end
-            end
-          end
-
-          if next_dev_flag == true
-            dev_selector += 1
-            next
-          end
-
-          selecteds[dev_selector%(num_of_appliers/2)].rater_group_id = ratergroups[group_selector%total_rater_groups].id
-          dev_selector += 1
-          group_selector += 1
+          applieds = @evaluation.applieds.order("RANDOM()").first(num_of_appliers)
+          selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_appliers/2)
           
-          break if loop_counter > (selecteds.count * total_rater_groups)
-        end
+          for i in 0..(applieds.count-1)
+            puts "i: #{i}"
+            applieds[i].ratee_group_id = rateegroups[i%total_ratee_groups].id
+          end
 
-        for l in 0..(selecteds.count-1)
-          if selecteds[dev_selector%(num_of_appliers/2)].rater_group_id != nil
-            dev_selector += 1
-          else
+          dev_selector = 0
+          group_selector = 0
+          loop_counter = 0
+
+          begin
+            loop_counter += 1
+            puts "======================"
+            puts "#{loop_counter}"
+            puts "======================"
+
+            if selecteds[dev_selector%(num_of_appliers/2)].rater_group_id != nil
+              dev_selector += 1
+              next
+            end
+
+            mapped_ratee_group = Mapping.where(rater_group_id: ratergroups[group_selector%total_rater_groups].id)
+
+            next_dev_flag = false
+            finish_flag = false
+
+            for j in 0..(mapped_ratee_group.count-1)
+              mapped_ratee_dev = []
+              for h in 0..(applieds.count-1)
+                if applieds[h].ratee_group_id == mapped_ratee_group[j].ratee_group_id
+                  mapped_ratee_dev << applieds[h]
+                end
+              end
+              # mapped_ratee_dev = applieds.where(ratee_group_id: mapped_ratee_group[j].ratee_group_id)
+              for k in 0..(mapped_ratee_dev.count-1)
+                if mapped_ratee_dev[k].developer_id == selecteds[dev_selector%(num_of_appliers/2)].developer_id
+                  next_dev_flag = true
+                end
+              end
+            end
+
+            if next_dev_flag == true
+              dev_selector += 1
+              next
+            end
+
             selecteds[dev_selector%(num_of_appliers/2)].rater_group_id = ratergroups[group_selector%total_rater_groups].id
             dev_selector += 1
             group_selector += 1
-          end
-          
+
+
+            finish_flag = true
+            for x in 0..(selecteds.count-1)
+              if selecteds[x].rater_group_id == nil
+                  finish_flag = false
+              end          
+            end
+          end while (finish_flag == false)&&(loop_counter <= ((num_of_appliers/2)*total_rater_groups))
+
+        end while (finish_flag == false)&&(case_counter<1000)
+
+
+        for l in 0..(selecteds.count-1)
+          if selecteds[l].rater_group_id == nil
+            selecteds[l].rater_group_id = ratergroups[group_selector%total_rater_groups].id
+            group_selector += 1
+          end          
         end
 
-        # for i in 0..(selecteds.count-1)
-        #   selecteds[i].rater_group_id = ratergroups[i%total_rater_groups].id
-        #   selecteds[i].save
-        # end
+        # save db
+        for u in 0..(selecteds.count-1)
+          selecteds[u].save
+        end
+
+        for v in 0..(applieds.count-1)
+          applieds[v].save
+        end
+
 
       end
     end

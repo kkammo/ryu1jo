@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'admin' => 'admin#index'
   get 'admin/developers' => 'admin#developers'
   get 'admin/evaluations' => 'admin#evaluations'
-  get 'admin/evaluations/:id' => 'admin#evaluation'
+  get 'admin/evaluation' => 'admin#evaluation', param: :id
 
   devise_for :developers do
     get '/developers/sign_out' => 'devise/sessions#destroy'
