@@ -92,7 +92,7 @@ class EvaluationsController < ApplicationController
 
 
         if total_ratee_groups < total_rater_groups
-          redirect_to evaluation_path(@evaluation)
+          redirect_to admin_evaluation_path(:id => @evaluation.id)
         end
 
         selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
