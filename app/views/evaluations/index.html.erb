@@ -1,8 +1,8 @@
   <h2>평가 목록</h2>
   <table class="table table-condensed">
     <% @evaluations.each do |evaluation| %>
-      <tr>
-        <td><%= link_to evaluation.id, evaluation_path(evaluation) %></td>
+      <tr style="background-color: ghostwhite">
+        <td><%= link_to "#{evaluation.id}차 평가", evaluation_path(evaluation) %></td>
         <td></td>
       </tr>
     <% end %>

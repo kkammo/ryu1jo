@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get '/developers/sign_out' => 'devise/sessions#destroy'
   end
 
-  # resources :materials
+  resources :materials
 
   resources :evaluations do
     get "map", on: :member

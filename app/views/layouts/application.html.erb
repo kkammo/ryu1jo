@@ -14,13 +14,22 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "전문가관리시스템", root_path %>
+    <div style="padding: 10px">
+      <% if developer_signed_in? && current_developer.admin %>
+        
+      <% else %>
+        <%= link_to  image_tag("logo.png", :size => "120x40"), root_path %>
+      <% end %>
+    </div>
   </div>
   
   <div class="collapse navbar-collapse navbar-ex1-collapse">
 
     <% if developer_signed_in? && current_developer.admin %>
       <ul class="nav navbar-nav navbar-left">
+        <li>
+          <%= link_to '관리자', admin_path %>
+        </li>
         <li>
           <%= link_to '평가', admin_evaluations_path %>
         </li>
