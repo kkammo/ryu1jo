@@ -17,7 +17,11 @@ class AdminController < ApplicationController
   end
 
   def materials
-    @materials = Material.all
+    if params[:field]
+      @materials = Material.where(field: params[:field])
+    else
+      @materials = Material.all
+    end
   end
   
   def material

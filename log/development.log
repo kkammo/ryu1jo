@@ -52295,3 +52295,1272 @@ Processing by AdminController#materials as HTML
   Rendered admin/materials.html.erb within layouts/application (3.8ms)
   [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
 Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/material?id=1" for 127.0.0.1 at 2014-12-01 23:43:43 +0900
+Processing by AdminController#material as HTML
+  Parameters: {"id"=>"1", "param"=>:id}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered admin/material.html.erb within layouts/application (8.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 67ms (Views: 60.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (19.2ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 101ms (Views: 91.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:27 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=0" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"0"}
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 0[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:30 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.0ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:33 +0900
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 23:46:36 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (4.8ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:46:43 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:47:03 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.1ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:04 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=0" for 127.0.0.1 at 2014-12-01 23:47:16 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"0"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 0[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:17 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.2ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:47:20 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/developers/sign_in
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/sign_in" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 23:50:00 +0900
+
+
+Started GET "/developers/sign_in" for 127.0.0.1 at 2014-12-01 23:50:01 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2014-12-01 23:50:10 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7hDUpUlAUbRVN4XMXbLXRuOPNGRjSXjqeZzu2PsVX4k=", "developer"=>{"email"=>"student2@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."email" = 'student2@ex.com'  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = 2[0m  [["current_sign_in_at", "2014-12-01 14:50:10.603441"], ["last_sign_in_at", "2014-12-01 14:42:04.422630"], ["sign_in_count", 8], ["updated_at", "2014-12-01 14:50:10.604428"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 23:50:10 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 81ms (Views: 69.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 23:50:13 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.6ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (4.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=2" for 127.0.0.1 at 2014-12-01 23:50:16 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"2"}
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 2[0m
+  Rendered admin/materials.html.erb within layouts/application (1.3ms)
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/career/search?utf8=%E2%9C%93&format=4&period=period&begin%5B%7B%3Aclass%3D%3E%22form-control%22%7D%281i%29%5D=2014&begin%5B%7B%3Aclass%3D%3E%22form-control%22%7D%282i%29%5D=11&begin%5B%7B%3Aclass%3D%3E%22form-control%22%7D%283i%29%5D=30&end%5B%7B%3Aclass%3D%3E%22form-control%22%7D%281i%29%5D=2014&end%5B%7B%3Aclass%3D%3E%22form-control%22%7D%282i%29%5D=11&end%5B%7B%3Aclass%3D%3E%22form-control%22%7D%283i%29%5D=30" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+Processing by CareerController#search as 
+  Parameters: {"utf8"=>"✓", "period"=>"period", "begin"=>{"{:class=>\"form-control\"}(1i)"=>"2014", "{:class=>\"form-control\"}(2i)"=>"11", "{:class=>\"form-control\"}(3i)"=>"30"}, "end"=>{"{:class=>\"form-control\"}(1i)"=>"2014", "{:class=>\"form-control\"}(2i)"=>"11", "{:class=>\"form-control\"}(3i)"=>"30"}}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE ("results"."created_at" BETWEEN '2014-11-30 00:00:00.000000' AND '2014-11-30 23:59:59.000000') AND "results"."rater_id" = 2
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  Rendered career/search.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 90ms (Views: 81.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:06 +0900
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 23:52:08 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (4.7ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:12 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:30 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=2" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"2"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 2[0m
+  Rendered admin/materials.html.erb within layouts/application (1.2ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:33 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=2" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"2"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 2[0m
+  Rendered admin/materials.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:48 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=0" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"0"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 0[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.2ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=0" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"0"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 0
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.2ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:50 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.6ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:52:52 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (4.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:03 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (3.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:06 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=0" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"0"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 0
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (2.7ms)
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:21 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=3" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"3"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 3[0m
+  Rendered admin/materials.html.erb within layouts/application (1.1ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:53:24 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=3" for 127.0.0.1 at 2014-12-01 23:55:10 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"3"}
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 3[0m
+  Rendered admin/materials.html.erb within layouts/application (1.8ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:11 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (2.8ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:55:13 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=3" for 127.0.0.1 at 2014-12-01 23:56:45 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"3"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 3
+  Rendered admin/materials.html.erb within layouts/application (1.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:56:46 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=3" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"3"}
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 3
+  Rendered admin/materials.html.erb within layouts/application (1.6ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:41 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:58:59 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:59:14 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (2.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:59:14 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:15 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=4" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"4"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 4
+  Rendered admin/materials.html.erb within layouts/application (1.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:18 +0900
+
+
+Started GET "/admin/materials?utf8=%E2%9C%93&field=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+Processing by AdminController#materials as HTML
+  Parameters: {"utf8"=>"✓", "field"=>"1"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."field" = 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.5ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 23:59:36 +0900
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-02 00:00:01 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-02 00:00:03 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered admin/evaluations.html.erb within layouts/application (5.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-02 00:00:03 +0900
+Processing by AdminController#materials as HTML
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (4.6ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-02 00:00:04 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered admin/evaluations.html.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-02 00:00:05 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-12-02 00:00:05 +0900
+Processing by AdminController#developers as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered admin/developers.html.erb within layouts/application (1.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-02 00:00:06 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-02 00:00:07 +0900
+Processing by AdminController#materials as HTML
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (4.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-02 00:00:08 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered admin/evaluations.html.erb within layouts/application (2.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-02 00:00:08 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-02 00:00:09 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (2.5ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-02 00:00:10 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.9ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-02 00:00:10 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-12-02 00:00:11 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (1.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-02 00:00:12 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-02 00:00:12 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.9ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-02 00:00:13 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (2.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-02 00:00:13 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-12-02 00:00:14 +0900
+Processing by AdminController#developers as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT "developers".* FROM "developers"
+  Rendered admin/developers.html.erb within layouts/application (1.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.7ms)
