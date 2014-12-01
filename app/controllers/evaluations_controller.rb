@@ -9,6 +9,11 @@ class EvaluationsController < ApplicationController
 	def show
 		@evaluation = Evaluation.find(params[:id])
     @mappings = @evaluation.mappings
+    @selected = Selected.where(evaluation_id: @evaluation.id, developer_id: current_developer.id)[0]
+    if @selected
+      @rater_group = @selected.rater_group
+      @mapped_groups = @rater_group.mappings
+    end
 	end
 
 	def new

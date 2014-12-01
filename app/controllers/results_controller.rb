@@ -1,4 +1,4 @@
-class ResultsController < ApplicationController
+Rclass ResultsController < ApplicationController
   before_action :set_result, only: [:show]
   before_filter :require_sign_in
 
@@ -21,7 +21,7 @@ class ResultsController < ApplicationController
   def new
     @material = Material.find(params[:material_id])
 
-    if Evaluation.find(params[:evaluation_id]).precessed
+    if Evaluation.find(params[:evaluation_id]).precossed
       redirect_to root_path, notice: '평가 가능 기간이 지났습니다.'
     end
 

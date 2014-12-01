@@ -83,6 +83,7 @@
         <p>평가 평점: <% if (cnt = Result.where(rater_id: current_developer.id).count) > 0 %><%= Result.where(rater_id: current_developer.id).sum(:value)/cnt %> <% else %>0.0<% end %> </p>
         <p> 올린 자료의 수: <%= current_developer.materials.count %></p>
         <p> 나의 평점: <%= current_developer.get_avg %></p>
+        <p> <%= link_to "통계 및 로그 더 보기..", career_index_path %> </p>
       </div>
 
     </div>

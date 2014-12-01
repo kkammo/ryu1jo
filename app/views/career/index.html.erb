@@ -1,0 +1,149 @@
+<body>
+<h2>statistic</h2>
+<br>
+
+<h4> 이직 및 소속 변경 내역 </h4>
+<div class="well">
+	<table class="table table-condensed" style="padding: 20px">
+		<thead>
+  		<tr>
+    		<th colspan="4">날짜</th>
+    		<th colspan="4">이전</th>
+    		<th colspan="4">변경 후</th>
+  		</tr>
+  	</thead>
+	  <tbody>
+  	  <% @careers.each do |career| %>
+    	  <tr style="background-color: ghostwhite">
+      	  <td colspan="4"><%= career.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+      	  <td colspan="4"><%= career.prev %></td>
+      	  <td colspan="4"><%= career.current %></td>
+      	</tr>
+    	<% end %>
+  	</tbody>
+	</table>
+</div>
+<br>
+
+<h4> 평가 자료 업로드 내역 </h4>
+<div class="well">
+	<table class="table table-condensed" style="padding: 20px">
+		<thead>
+  		<tr>
+    		<th colspan="4">날짜</th>
+    		<th colspan="4">분야</th>
+    		<th colspan="4">제목</th>    		
+  		</tr>
+  	</thead>
+	  <tbody>
+  	  <% @materials.each do |material| %>
+    	  <tr style="background-color: ghostwhite">
+      	  <td colspan="4"><%= material.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+      	  <td colspan="4"><%= material.field %></td>
+      	  <td colspan="4"><%= material.subject %></td>
+      	</tr>
+    	<% end %>
+  	</tbody>
+	</table>
+</div>
+<br>
+
+<h4> 피평가 내역 </h4>
+<div class="well">
+	<table class="table table-condensed" style="padding: 20px">
+		<thead>
+  		<tr>
+    		<th colspan="3">날짜</th>
+    		<th colspan="2">회차</th>
+    		<th colspan="3">자료 제목</th>
+    		<th colspan="2">분야</th>
+    		<th colspan="2">점수</th>    		
+  		</tr>
+  	</thead>
+	  <tbody>
+  	  <% @received_results.each do |result| %>
+    	  <tr style="background-color: ghostwhite">
+      	  <td colspan="3"><%= result.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+      	  <td colspan="2"><%= "#{result.evaluation_id}차 평가" %></td>
+      	  <td colspan="3"><%= result.material.subject %></td>
+      	  <td colspan="2"><%= result.material.field %></td>
+      	  <td colspan="2"><%= result.value %></td>
+      	</tr>
+    	<% end %>
+  	</tbody>
+	</table>
+</div>
+<br>
+
+<h4> 평가 내역 </h4>
+<div class="well">
+	<table class="table table-condensed" style="padding: 20px">
+		<thead>
+  		<tr>
+    		<th colspan="3">날짜</th>
+    		<th colspan="2">회차</th>
+    		<th colspan="3">자료 제목</th>
+    		<th colspan="2">분야</th>
+    		<th colspan="2">점수</th>    		
+  		</tr>
+  	</thead>
+	  <tbody>
+  	  <% @gived_results.each do |result| %>
+    	  <tr style="background-color: ghostwhite">
+      	  <td colspan="3"><%= result.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+      	  <td colspan="2"><%= "#{result.evaluation_id}차 평가" %></td>
+      	  <td colspan="3"><%= result.material.subject %></td>
+      	  <td colspan="2"><%= result.material.field %></td>
+      	  <td colspan="2"><%= result.value %></td>
+      	</tr>
+    	<% end %>
+  	</tbody>
+	</table>
+</div>
+<br>
+
+<h4> 평가 신청 내역 </h4>
+<div class="well">
+  <table class="table table-condensed" style="padding: 20px">
+    <thead>
+      <tr>
+        <th colspan="3">날짜</th>
+        <th colspan="2">회차</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <% @applieds.each do |applied| %>
+        <tr style="background-color: ghostwhite">
+          <td colspan="3"><%= applied.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+          <td colspan="2"><%= "#{applied.evaluation_id}차 평가" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<h4> 평가자 선정 기록 </h4>
+<div class="well">
+  <table class="table table-condensed" style="padding: 20px">
+    <thead>
+      <tr>
+        <th colspan="3">날짜</th>
+        <th colspan="2">회차</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <% @selecteds.each do |selected| %>
+        <tr style="background-color: ghostwhite">
+          <td colspan="3"><%= selected.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+          <td colspan="2"><%= "#{selected.evaluation_id}차 평가" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+</body>
+
+

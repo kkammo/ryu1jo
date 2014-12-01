@@ -39815,3 +39815,3132 @@ Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 14:11:37 +0900
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:11:37 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 14:57:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (1.0ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 248ms (Views: 167.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:26 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 14:57:28 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:28 +0900
+
+
+Started GET "/companies/freelancer" for 127.0.0.1 at 2014-12-01 14:57:29 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"freelancer"}
+  [1m[35mCompany Load (0.3ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "freelancer"]]
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT "developers".* FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.6ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.5ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mDepartment Load (0.3ms)[0m  SELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'freelancer'
+  Rendered companies/show.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 132ms (Views: 105.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:29 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 14:57:35 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:35 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 14:57:36 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:36 +0900
+
+
+Started GET "/companies/LG" for 127.0.0.1 at 2014-12-01 14:57:37 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"LG"}
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1[0m  [["name", "LG"]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mDepartment Load (0.3ms)[0m  SELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'LG'
+  Rendered companies/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:37 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 14:57:41 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.9ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:41 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 14:57:42 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 98ms (Views: 88.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:42 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 14:57:46 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:46 +0900
+
+
+Started GET "/materials/1" for 127.0.0.1 at 2014-12-01 14:57:48 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."material_id" = 1
+  Rendered materials/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:48 +0900
+
+
+Started GET "/results/1" for 127.0.0.1 at 2014-12-01 14:57:57 +0900
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT  "results".* FROM "results"  WHERE "results"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered results/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:57:57 +0900
+
+
+Started GET "/results/2" for 127.0.0.1 at 2014-12-01 14:58:02 +0900
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mResult Load (0.3ms)[0m  SELECT  "results".* FROM "results"  WHERE "results"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered results/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 14:58:02 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:00:16 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:00:16 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:00:17 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:00:17 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:05 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 95ms (Views: 68.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:05 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:06 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (3.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:06 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:07 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:07 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:08 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:08 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:04:08 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 73ms (Views: 59.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:08 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:09 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:09 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:10 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:10 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:04:11 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:11 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:04:11 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:11 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:04:12 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:12 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:04:12 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:13 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:04:13 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:13 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:14 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.4ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:14 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:16 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:16 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:17 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:17 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:18 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:18 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:04:19 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 79ms (Views: 70.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:20 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:23 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:23 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:23 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:24 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:04:24 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:24 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:04:34 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.4ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:34 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:04:36 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:04:36 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 90ms (Views: 86.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:08:41 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 83ms (Views: 80.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:08:59 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:09:36 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvaluation Load (0.4ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:09:36 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:09:37 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:09:48 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.7ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:09:49 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvaluation Load (0.4ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1[0m
+  Rendered evaluations/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:13:33 +0900
+  [1m[36mSelected Load (0.6ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"[0m
+  [1m[35mRaterGroup Load (0.5ms)[0m  SELECT  "rater_groups".* FROM "rater_groups"  WHERE "rater_groups"."id" = 1 LIMIT 1
+  [1m[36mSelected Load (0.7ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1[0m
+  [1m[35mSelected Load (0.8ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1
+  [1m[36mSelected Load (0.7ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 2[0m
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:19:02 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mSelected Load (0.3ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1
+Completed 500 Internal Server Error in 33ms
+
+NoMethodError (undefined method `rater_group' for nil:NilClass):
+  app/controllers/evaluations_controller.rb:13:in `show'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mSelected Load (0.5ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 114ms (Views: 79.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:19:21 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:25:56 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (4.9ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 89ms (Views: 77.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:25:57 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:25:57 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.5ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 88ms (Views: 80.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:25:57 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:25:58 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:25:58 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:09 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:09 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:26:10 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:10 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:26:11 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.8ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:11 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 15:26:11 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:12 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:26:12 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.7ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:12 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:26:13 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:13 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:14 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:14 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:26:15 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:15 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:26:15 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:15 +0900
+
+
+Started GET "/evaluations/1" for 127.0.0.1 at 2014-12-01 15:26:17 +0900
+Processing by EvaluationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mSelected Load (0.3ms)[0m  [1mSELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."evaluation_id" = 1 AND "selecteds"."developer_id" = 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered evaluations/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 93ms (Views: 82.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:17 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:26:21 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.4ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (1.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:21 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:26:22 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:22 +0900
+
+
+Started GET "/materials/1" for 127.0.0.1 at 2014-12-01 15:26:24 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered materials/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:24 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 15:26:28 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:28 +0900
+
+
+Started GET "/materials/1" for 127.0.0.1 at 2014-12-01 15:26:29 +0900
+Processing by MaterialsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."material_id" = 1
+  Rendered materials/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:29 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:37 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:38 +0900
+
+
+Started GET "/companies/LG" for 127.0.0.1 at 2014-12-01 15:26:40 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"LG"}
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1[0m  [["name", "LG"]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  [1m[35mEvaluation Load (0.1ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.1ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.1ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'[0m
+  [1m[35mDepartment Load (0.2ms)[0m  SELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'LG'
+  Rendered companies/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 84ms (Views: 73.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:40 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:48 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:48 +0900
+
+
+Started GET "/companies/freelancer" for 127.0.0.1 at 2014-12-01 15:26:49 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"freelancer"}
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1[0m  [["name", "freelancer"]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT "developers".* FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 1
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 1
+  [1m[36mEvaluation Load (0.1ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 1
+  [1m[36mEvaluation Load (0.1ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 1
+  [1m[36mEvaluation Load (0.1ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 1
+  [1m[36mEvaluation Load (0.1ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1
+  [1m[36mDepartment Load (0.2ms)[0m  [1mSELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'freelancer'[0m
+  Rendered companies/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 78ms (Views: 71.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:50 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:55 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:55 +0900
+
+
+Started GET "/companies/LG" for 127.0.0.1 at 2014-12-01 15:26:57 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"LG"}
+  [1m[35mCompany Load (0.4ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "LG"]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mEvaluation Load (0.1ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'LG'
+  [1m[36mDepartment Load (0.2ms)[0m  [1mSELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'LG'[0m
+  Rendered companies/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 79ms (Views: 73.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:57 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:26:58 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.2ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:26:59 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:27:03 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:27:03 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:27:05 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 134ms (Views: 120.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:27:05 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:30:50 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 90ms (Views: 74.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:30:50 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:31:58 +0900
+
+
+Started GET "/careers" for 127.0.0.1 at 2014-12-01 15:31:59 +0900
+
+ActionController::RoutingError (uninitialized constant CareersController):
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.4ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2014-12-01 15:32:00 +0900
+
+ActionController::RoutingError (uninitialized constant CareersController):
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.3ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2014-12-01 15:32:49 +0900
+
+ActionController::RoutingError (uninitialized constant CareersController):
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.7ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2014-12-01 15:33:42 +0900
+
+ActionController::RoutingError (No route matches [GET] "/careers"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.8ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2014-12-01 15:33:55 +0900
+
+ActionController::RoutingError (No route matches [GET] "/careers"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.3ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:33:59 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (68.9ms)
+Completed 500 Internal Server Error in 85ms
+
+ActionView::Template::Error (undefined local variable or method `career_path' for #<#<Class:0x007fb4e84cb590>:0x007fb4e84ca960>):
+    83:         <p>평가 평점: <% if (cnt = Result.where(rater_id: current_developer.id).count) > 0 %><%= Result.where(rater_id: current_developer.id).sum(:value)/cnt %> <% else %>0.0<% end %> </p>
+    84:         <p> 올린 자료의 수: <%= current_developer.materials.count %></p>
+    85:         <p> 나의 평점: <%= current_developer.get_avg %></p>
+    86:         <p> <%= link_to "통계 및 로그 더 보기..", career_path %> </p>
+    87:       </div>
+    88: 
+    89:     </div>
+  app/views/devise/registrations/edit.html.erb:86:in `_app_views_devise_registrations_edit_html_erb__4234561440214086330_70207484085460'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:34:08 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (49.3ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (undefined local variable or method `careers_path' for #<#<Class:0x007fb4e84cb590>:0x007fb4e1a18ef0>):
+    83:         <p>평가 평점: <% if (cnt = Result.where(rater_id: current_developer.id).count) > 0 %><%= Result.where(rater_id: current_developer.id).sum(:value)/cnt %> <% else %>0.0<% end %> </p>
+    84:         <p> 올린 자료의 수: <%= current_developer.materials.count %></p>
+    85:         <p> 나의 평점: <%= current_developer.get_avg %></p>
+    86:         <p> <%= link_to "통계 및 로그 더 보기..", careers_path %> </p>
+    87:       </div>
+    88: 
+    89:     </div>
+  app/views/devise/registrations/edit.html.erb:86:in `_app_views_devise_registrations_edit_html_erb__4234561440214086330_70207428137300'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 100ms (Views: 95.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:34:24 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:34:26 +0900
+Processing by CareerController#index as HTML
+  Rendered career/index.html.erb within layouts/application (0.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:34:26 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+Processing by CareerController#index as HTML
+  Rendered career/index.html.erb within layouts/application (4.9ms)
+  [1m[36mDeveloper Load (0.9ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:34:44 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered career/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 99ms (Views: 59.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:44:26 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (10.1ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 114ms (Views: 75.5ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:53:54 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:54:33 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered career/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:54:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:54:34 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.4ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:54:35 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.4ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered career/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:54:49 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:04 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:55:32 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered career/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:33 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 78ms (Views: 73.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:55 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered career/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 84ms (Views: 80.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:56 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 15:55:58 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered evaluations/index.html.erb within layouts/application (5.2ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 59.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:58 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 15:55:59 +0900
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  Rendered companies/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:55:59 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 15:56:00 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 74ms (Views: 68.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:56:00 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:56:02 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:56:02 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:56:58 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.4ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `field' for #<Result:0x007fb4e6b53018>):
+    62:   	  <% @received_results.each do |result| %>
+    63:     	  <tr style="background-color: ghostwhite">
+    64:       	  <td colspan="4"><%= result.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+    65:       	  <td colspan="4"><%= result.field %></td>
+    66:       	  <td colspan="4"><%= result.subject %></td>
+    67:       	</tr>
+    68:     	<% end %>
+  app/views/career/index.html.erb:65:in `block in _app_views_career_index_html_erb__4367192334444695156_70207429069020'
+  app/views/career/index.html.erb:62:in `_app_views_career_index_html_erb__4367192334444695156_70207429069020'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.5ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  Rendered career/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 88ms (Views: 82.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 15:59:53 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:01:06 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.5ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 120ms (Views: 92.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:01:55 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:02:10 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:02:11 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:02:30 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:02:39 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 16:04:13 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:04:13 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:04:15 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:04:15 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 16:04:29 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:04:29 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:04:44 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.2ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:04:45 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 72ms (Views: 66.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:04:48 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.5ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:05:08 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:05:31 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:05:32 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.5ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 81ms (Views: 75.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:06:40 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 16:09:07 +0900
+Processing by HomeController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 67ms (Views: 55.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:07 +0900
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2014-12-01 16:09:08 +0900
+Processing by EvaluationsController#index as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered evaluations/index.html.erb within layouts/application (3.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:08 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 16:09:09 +0900
+Processing by MaterialsController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  Rendered materials/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:09 +0900
+
+
+Started GET "/companies" for 127.0.0.1 at 2014-12-01 16:09:09 +0900
+Processing by CompaniesController#index as HTML
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies"
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  Rendered companies/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:09 +0900
+
+
+Started GET "/companies/freelancer" for 127.0.0.1 at 2014-12-01 16:09:12 +0900
+Processing by CompaniesController#show as HTML
+  Parameters: {"name"=>"freelancer"}
+  [1m[35mCompany Load (0.3ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."name" = $1 LIMIT 1  [["name", "freelancer"]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT "evaluations".* FROM "evaluations"
+  [1m[36mEvaluation Load (0.2ms)[0m  [1mSELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT "developers".* FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 2 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.5ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 3 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.1ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 4 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 5 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.1ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 6 AND "results"."ratee_id" = 1[0m
+  [1m[35mEvaluation Load (0.2ms)[0m  SELECT  "evaluations".* FROM "evaluations"  WHERE "evaluations"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "developers"  WHERE "developers"."cname" = 'freelancer'[0m
+  [1m[35mResult Load (0.4ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 2
+  [1m[36mResult Load (0.4ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."evaluation_id" = 1 AND "results"."ratee_id" = 1[0m
+  [1m[35mDepartment Load (0.2ms)[0m  SELECT "departments".* FROM "departments"  WHERE "departments"."cname" = 'freelancer'
+  Rendered companies/show.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 93ms (Views: 78.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:12 +0900
+
+
+Started GET "/materials" for 127.0.0.1 at 2014-12-01 16:09:13 +0900
+Processing by MaterialsController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  Rendered materials/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:13 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 16:09:14 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:14 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:09:18 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.4ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 64ms (Views: 59.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:18 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 16:09:27 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:09:27 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:27:45 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mResult Load (0.3ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1
+  Rendered career/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 75ms (Views: 70.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:27:45 +0900
+
+
+Started GET "/developers/edit.1" for 127.0.0.1 at 2014-12-01 16:27:49 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:27:49 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 16:27:51 +0900
+Processing by CareerController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35mCareer Load (0.3ms)[0m  SELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 1[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 1
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."rater_id" = 1[0m
+  Rendered career/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 16:27:51 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 18:37:41 +0900
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  composite_primary_keys (7.0.11) lib/composite_primary_keys/connection_adapters/abstract/connection_specification_changes.rb:48:in `retrieve_connection'
+  composite_primary_keys (7.0.11) lib/composite_primary_keys/connection_adapters/abstract/connection_specification_changes.rb:30:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/moya/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 18:38:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/developers/sign_in
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/sign_in" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 229ms (Views: 210.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 18:38:11 +0900
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2014-12-01 18:38:29 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RgI7Nf+09AlTICBLFaoN8r/+IxjRFcYsu3ITxwjpbSM=", "developer"=>{"email"=>"student2@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mDeveloper Load (7.1ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."email" = 'student2@ex.com'  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 115ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RgI7Nf+09AlTICBLFaoN8r/+IxjRFcYsu3ITxwjpbSM=", "developer"=>{"email"=>"student2@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 155ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:38:29 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:29 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-01 18:38:30 +0900
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RgI7Nf+09AlTICBLFaoN8r/+IxjRFcYsu3ITxwjpbSM=", "developer"=>{"email"=>"student2@ex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."email" = 'student2@ex.com'  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = 2[0m  [["current_sign_in_at", "2014-12-01 09:38:34.756210"], ["last_sign_in_at", "2014-12-01 05:10:53.185853"], ["sign_in_count", 6], ["updated_at", "2014-12-01 09:38:34.758027"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 81ms (Views: 64.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:38:34 +0900
+
+
+Started GET "/admin/developers" for 127.0.0.1 at 2014-12-01 18:38:37 +0900
+Processing by AdminController#developers as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT "developers".* FROM "developers"[0m
+  Rendered admin/developers.html.erb within layouts/application (2.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-01 18:38:40 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.8ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (8.4ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 18:38:42 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 18:38:49 +0900
+Processing by AdminController#materials as HTML
+  [1m[35mMaterial Load (2.3ms)[0m  SELECT "materials".* FROM "materials"
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1
+  Rendered admin/materials.html.erb within layouts/application (21.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 86ms (Views: 74.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-01 18:38:50 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[35mEvaluation Load (0.3ms)[0m  SELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC
+  Rendered admin/evaluations.html.erb within layouts/application (3.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 18:38:51 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-01 18:38:52 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (2.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/developers/edit.2" for 127.0.0.1 at 2014-12-01 18:40:32 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."rater_id" = 2[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."rater_id" = 2
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "materials"  WHERE "materials"."developer_id" = 2
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("results"."value") AS sum_id FROM "results"  WHERE "results"."material_id" = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "results"  WHERE "results"."material_id" = 2[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 92ms (Views: 83.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 18:40:33 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (1.7ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 2[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2
+  [1m[36mResult Load (0.3ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 2
+  [1m[36mMaterial Load (0.8ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mApplied Load (3.7ms)[0m  [1mSELECT "applieds".* FROM "applieds"  WHERE "applieds"."developer_id" = 2[0m
+  Rendered career/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 112ms (Views: 85.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.4ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 2[0m
+  [1m[35mMaterial Load (0.3ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 2
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mApplied Load (0.3ms)[0m  [1mSELECT "applieds".* FROM "applieds"  WHERE "applieds"."developer_id" = 2[0m
+  Rendered career/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 81ms (Views: 75.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:40:34 +0900
+
+
+Started GET "/career" for 127.0.0.1 at 2014-12-01 18:42:06 +0900
+Processing by CareerController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+  [1m[36mCareer Load (0.3ms)[0m  [1mSELECT "careers".* FROM "careers"  WHERE "careers"."developer_id" = 2[0m
+  [1m[35mMaterial Load (0.2ms)[0m  SELECT "materials".* FROM "materials"  WHERE "materials"."developer_id" = 2
+  [1m[36mResult Load (0.2ms)[0m  [1mSELECT "results".* FROM "results"  WHERE "results"."ratee_id" = 2[0m
+  [1m[35mResult Load (0.2ms)[0m  SELECT "results".* FROM "results"  WHERE "results"."rater_id" = 2
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "materials".* FROM "materials"  WHERE "materials"."id" = 1 LIMIT 1
+  [1m[36mApplied Load (0.3ms)[0m  [1mSELECT "applieds".* FROM "applieds"  WHERE "applieds"."developer_id" = 2[0m
+  [1m[35mSelected Load (11.1ms)[0m  SELECT "selecteds".* FROM "selecteds"  WHERE "selecteds"."developer_id" = 2
+  Rendered career/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 102ms (Views: 84.3ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:42:07 +0900

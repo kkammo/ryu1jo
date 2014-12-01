@@ -1,5 +1,14 @@
 class CareerController < ApplicationController
 
+	def index
+		@careers = current_developer.careers
+		@materials = current_developer.materials
+		@received_results = Result.where(ratee_id: current_developer.id)
+		@gived_results = Result.where(rater_id: current_developer.id)
+		@applieds = current_developer.applieds
+		@selecteds = current_developer.selecteds
+	end
+
 	def change_company
 		@developer = Developer.find(params[:developer_id])
 

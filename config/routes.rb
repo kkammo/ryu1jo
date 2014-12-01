@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     resources :departments, param: :dname_cname
   end
 
+  resources :career, only: [:index]
+
   get 'careers/change_company' => 'career#change_company'
   get 'careers/change_department' => 'career#change_department'
 
