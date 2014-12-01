@@ -90,17 +90,10 @@ class EvaluationsController < ApplicationController
             total_rater_groups += 1
           end
 
-
           if total_ratee_groups < total_rater_groups
             redirect_to admin_evaluation_path(:id => @evaluation.id)
           end
-
-          selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
-
-          selected_developers.each do |developer|
-            @evaluation.selecteds.create(developer_id: developer.id)
-          end
-
+          
           for i in 1..total_ratee_groups
             @evaluation.ratee_groups.create
           end
@@ -108,6 +101,15 @@ class EvaluationsController < ApplicationController
           for i in 1..total_rater_groups
             @evaluation.rater_groups.create
           end
+
+
+          # select raters
+          
+          # selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
+
+          # selected_developers.each do |developer|
+          #   @evaluation.selecteds.create(developer_id: developer.id)
+          # end
 
           #mapping
           rateegroups = @evaluation.ratee_groups
@@ -118,20 +120,30 @@ class EvaluationsController < ApplicationController
             rater_group_id: rateegroups[i%total_rater_groups].id)
           end
 
-          # algorithm
+          # mapping algorithm
           case_counter = 0
           
           begin
             case_counter += 1
 
-            applieds = @evaluation.applieds.order("RANDOM()").first(num_of_appliers)
-            selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_selecteds)
-         
+            # select raters
           
+            selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
+
+            selected_developers.each do |developer|
+              @evaluation.selecteds.new(developer_id: developer.id)
+            end
+
+            applieds = @evaluation.applieds.order("RANDOM()").first(num_of_appliers)
+            selecteds = @evaluation.selecteds.first(num_of_selecteds)
+         
+            
+            # appliers to rateegroup
             for i in 0..(applieds.count-1)
               applieds[i].ratee_group_id = rateegroups[i/params[:rateemem].to_i].id
             end
 
+            # selecteds to ratergroup
             dev_selector = 0
             group_selector = 0
             loop_counter = 0
@@ -203,6 +215,13 @@ class EvaluationsController < ApplicationController
           for v in 0..(applieds.count-1)
             applieds[v].save
           end
+
+          # for z in 0..(selected_developers.count-1)
+          #   selected_developers.save
+          # end
+
+          @evaluation.appliable = false
+          @evaluation.save
         end
       end
     end

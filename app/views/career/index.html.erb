@@ -1,13 +1,24 @@
 <body>
-<h2>statistic</h2>
-<br>
-<!--
-<% for attribute in @careers[0].attributes.keys %>
-  <p><%= attribute.humanize %> <%= @careers[0].attributes[attribute].to_s %></p>
-<% end %>
--->
+<h2>Statistic</h2>
+
 <br>
 
+<div style="max-width: 200px">
+  <label>기록 검색</label>
+  
+  <select class="form-control">
+    <option> 이직 및 소속 변경 내역 </option>
+    <option> 평가 자료 업로드 내역 </option>
+    <option> 피평가 내역 </option>
+    <option> 평가 내역 </option>
+    <option> 평가 신청 내역 </option>
+    <option> 평가자 선정 기록 </option>
+  </select>
+</div>
+
+<br>
+
+<% if @careers.count > 0 %>
 <h4> 이직 및 소속 변경 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -30,7 +41,9 @@
 	</table>
 </div>
 <br>
+<% end %>
 
+<% if @materials.count > 0 %>
 <h4> 평가 자료 업로드 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -53,7 +66,9 @@
 	</table>
 </div>
 <br>
+<% end %>
 
+<% if @received_results.count > 0 %>
 <h4> 피평가 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -80,7 +95,9 @@
 	</table>
 </div>
 <br>
+<% end %>
 
+<% if @gived_results.count > 0 %>
 <h4> 평가 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -107,7 +124,9 @@
 	</table>
 </div>
 <br>
+<% end %>
 
+<% if @applieds.count > 0 %>
 <h4> 평가 신청 내역 </h4>
 <div class="well">
   <table class="table table-condensed" style="padding: 20px">
@@ -128,7 +147,9 @@
   </table>
 </div>
 <br>
+<% end %>
 
+<% if @selecteds.count > 0 %>
 <h4> 평가자 선정 기록 </h4>
 <div class="well">
   <table class="table table-condensed" style="padding: 20px">
@@ -149,6 +170,7 @@
   </table>
 </div>
 <br>
+<% end %>
 
 </body>
 
