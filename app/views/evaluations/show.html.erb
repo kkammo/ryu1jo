@@ -1,23 +1,32 @@
 <% if notice %>
-<p id="notice" class="alert alert-danger"><%= notice %></p>
+	<p id="notice" class="alert alert-danger"><%= notice %></p>
 <% end %>
 
 <h2>
-	<%= @evaluation.id %>차 평가
+	<%= @evaluation.id %>차 평가 
+	<% if @evaluation.appliable %>
+		<span class="label label-success">New</span>
+	<% else %>
+		<% if !@evaluation.processed %>
+			<span class="label label-warning">평가중</span>
+		<% else %>
+			<span class="label label-danger">완료</span>
+		<% end %>
+	<% end %>
 </h2>
 
+<br>
 <% if @evaluation.appliable %>
 	<%= form_tag apply_evaluation_path(@evaluation), :method => 'get', :role => 'apply'  do %>
     <button type="submit" class="btn btn-warning btn-xs">
       평가 신청 하기
 		</button>
 	<% end %>
-<% else %>
-	<% unless @evaluation.processed %>
-		<%= '평가중' %>
-	<% end %>
+<% end %>
 
-	<p> 완료 목록 </p>
+<br>
+
+	<h3> 완료 목록 </h3>
 
 	<table class="table table-condensed">
   	<thead>
@@ -30,10 +39,10 @@
     	<% Result.where(evaluation_id: @evaluation.id, ratee_id: current_developer.id).each do |result| %>
       	<tr style="background-color: antiquewhite">
         	<td>
-        		<%= result.value %>
+        		<%= Material.find(result.material_id).subject %>,
+        		점수: <%= result.value %>
         	</td>
 	      </tr>
   	  <% end %>
   	</tbody>
 	</table>
-<% end %>
