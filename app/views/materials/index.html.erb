@@ -1,6 +1,28 @@
 <body>
-<h1>내 자료 목록</h1>
-<%= link_to '평가 자료 등록', new_material_path, :class => 'btn btn-primary pull-right' %>
+<h1>
+  내 자료 목록
+  <%= link_to '평가 자료 등록', new_material_path, :class => 'btn btn-primary pull-right' %>
+</h1>
+
+<div class="row" style="background-color: white;">
+  <%= form_tag search_materials_path, :method => 'get', :role => 'search' do %>
+      <div class="col-md-2">
+        <select class="form-control" id="field" name="field">
+          <option value="0"> web </option>
+          <option value="1"> ios </option>
+          <option value="2"> android </option>
+          <option value="3"> windows </option>
+          <option value="4"> embeded </option>
+        </select>
+      </div>
+      <div class="col-md-10">
+        <button type="submit" class="btn btn-info pull-left">
+          검색
+        </button>
+      </div>
+  <% end %>
+</div>
+
 
 <table class="table table-condensed">
   <thead>

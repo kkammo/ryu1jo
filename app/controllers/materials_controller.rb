@@ -43,6 +43,10 @@ class MaterialsController < ApplicationController
     end
   end
 
+  def search
+    @materials = Material.where(field: params[:field], developer_id: current_developer.id)
+  end
+
   private
     def set_material
       @material = Material.find(params[:id])
