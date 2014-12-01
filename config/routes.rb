@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   resources :career, only: [:index]
 
+  get 'career/search' => 'career#search'
+
   get 'careers/change_company' => 'career#change_company'
   get 'careers/change_department' => 'career#change_department'
 

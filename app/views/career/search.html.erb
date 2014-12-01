@@ -1,56 +1,9 @@
 <body>
-<h2>Statistic</h2>
+<h2>검색 결과</h2>
 
 <br>
 
-<div >
-  <label>기록 검색</label>
-
-  <%= form_tag career_search_path, :method => 'get', :role => 'search' do %>
-    <div class="row" style="background-color: white">
-      <div class="col-md-2">
-        <select class="form-control" id="format" name="format">
-          <option value="1"> 이직 및 소속 변경 내역 </option>
-          <option value="2"> 평가 자료 업로드 내역 </option>
-          <option value="3"> 피평가 내역 </option>
-          <option value="4"> 평가 내역 </option>
-          <option value="5"> 평가 신청 내역 </option>
-          <option value="6"> 평가자 선정 기록 </option>
-        </select>
-      </div>
-        <div class="radio; col-md-8" style="text-align: center">
-          <label style="padding-right: 20px">
-            <input type="radio" name="period" id="period" value="today" checked>
-            당일
-          </label>
-          <label style="padding-right: 20px">
-            <input type="radio" name="period" id="period" value="7days">
-            최근 7일
-          </label>
-          <label style="padding-right: 20px">
-            <input type="radio" name="period" id="period" value="period">
-            기간
-          </label>
-          <label>
-            <%= date_select :begin, class: 'form-control' %>
-          </label>
-           ~~ 
-          <label>
-            <%= date_select :end, class: 'form-control' %>
-          </label>
-        </div>
-      <div class="col-md-2">
-        <button type="submit" class="btn btn-info pull-left">
-          검색
-        </button>
-      </div>
-    </div>
-  <% end %>
-</div>
-
-<br>
-
-<% if @careers.count > 0 %>
+<% if @careers %>
 <h4> 이직 및 소속 변경 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -75,7 +28,7 @@
 <br>
 <% end %>
 
-<% if @materials.count > 0 %>
+<% if @materials %>
 <h4> 평가 자료 업로드 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -100,7 +53,7 @@
 <br>
 <% end %>
 
-<% if @received_results.count > 0 %>
+<% if @received_results %>
 <h4> 피평가 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -129,7 +82,7 @@
 <br>
 <% end %>
 
-<% if @gived_results.count > 0 %>
+<% if @gived_results %>
 <h4> 평가 내역 </h4>
 <div class="well">
 	<table class="table table-condensed" style="padding: 20px">
@@ -158,7 +111,7 @@
 <br>
 <% end %>
 
-<% if @applieds.count > 0 %>
+<% if @applieds %>
 <h4> 평가 신청 내역 </h4>
 <div class="well">
   <table class="table table-condensed" style="padding: 20px">
@@ -181,7 +134,7 @@
 <br>
 <% end %>
 
-<% if @selecteds.count > 0 %>
+<% if @selecteds %>
 <h4> 평가자 선정 기록 </h4>
 <div class="well">
   <table class="table table-condensed" style="padding: 20px">
@@ -205,5 +158,3 @@
 <% end %>
 
 </body>
-
-
