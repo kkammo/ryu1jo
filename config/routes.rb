@@ -5,16 +5,19 @@ Rails.application.routes.draw do
   get 'admin/developers' => 'admin#developers'
   get 'admin/evaluations' => 'admin#evaluations'
   get 'admin/evaluation' => 'admin#evaluation', param: :id
+  get 'admin/materials' => 'admin#materials'
+  get 'admin/material' => 'admin#material', param: :id
 
   devise_for :developers do
     get '/developers/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :materials
+  # resources :materials
 
   resources :evaluations do
     get "map", on: :member
     get "apply", on: :member
+    get "close", on: :member
     resources :materials
     resources :results
     resources :mappings, only: [:index, :show]

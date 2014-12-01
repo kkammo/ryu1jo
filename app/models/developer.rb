@@ -16,4 +16,19 @@ class Developer < ActiveRecord::Base
 
   validates_presence_of :company
 
+  public
+    def get_avg
+      sum = 0
+      cnt = 0
+      for i in 0..self.materials.count-1
+        sum += Result.where(material_id: self.materials[i].id).sum(:value)
+        cnt += Result.where(material_id: self.materials[i].id).count
+      end
+      if cnt > 0
+        sum/cnt
+      else
+        0
+      end
+    end
+
 end

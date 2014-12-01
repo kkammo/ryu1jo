@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   def show
     @departments = @company.departments
+    @evaluations = Evaluation.all
   end
 
   # GET /companies/new

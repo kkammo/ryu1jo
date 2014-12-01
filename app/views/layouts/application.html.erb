@@ -19,20 +19,34 @@
   
   <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-    <ul class="nav navbar-nav navbar-left">
-    	<li>
-        <%= link_to '평가', evaluations_path %>
-      </li>
-      <li>
-        <%= link_to '자료', materials_path %>
-      </li>
-      <li>
-        <%= link_to '회사', companies_path %>
-      </li>
-      <li>
-        <%= link_to '개발자', admin_developers_path %>
-      </li>
-    </ul>
+    <% if developer_signed_in? && current_developer.admin %>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <%= link_to '평가', admin_evaluations_path %>
+        </li>
+        <li>
+          <%= link_to '자료', admin_materials_path %>
+        </li>
+        <li>
+          <%= link_to '회사', companies_path %>
+        </li>
+        <li>
+          <%= link_to '개발자', admin_developers_path %>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav navbar-nav navbar-left">
+    	  <li>
+          <%= link_to '평가', evaluations_path %>
+        </li>
+        <li>
+          <%= link_to '자료', materials_path %>
+        </li>
+        <li>
+          <%= link_to '회사', companies_path %>
+        </li>
+      </ul>
+    <% end %>
 
     <ul class="nav navbar-nav navbar-right">
       <% if developer_signed_in? %>

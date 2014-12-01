@@ -16,13 +16,13 @@
         <div class="col-md-6">
           <h4>피평가자</h4>
           <% mapping.ratee_group.applieds.each do |applied| %>
-            <p> <%= applied.developer.id %> </p>
+            <p> <%= applied.developer.name %>, id: <%= applied.developer.id %>, 회사: <%= applied.developer.cname %>, 부서: <%= applied.developer.dname %> </p>
           <% end %>
         </div>
         <div class="col-md-6">
           <h4>평가자</h4>
           <% mapping.rater_group.selecteds.each do |selected| %>
-            <p> <%= selected.developer.id %> </p>
+            <p> <%= selected.developer.name %>, id: <%= selected.developer.id %>, 회사: <%= selected.developer.cname %>, 부서: <%= selected.developer.dname %> </p>
           <% end %>
         </div>
     </div>

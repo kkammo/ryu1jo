@@ -1,6 +1,5 @@
 <body>
-<h1>내 자료 목록</h1>
-<%= link_to '평가 자료 등록', new_material_path, :class => 'btn btn-primary pull-right' %>
+<h1>등록된 자료 목록</h1>
 
 <table class="table table-condensed">
   <thead>
@@ -16,7 +15,8 @@
       <tr style="background-color: ghostwhite">
         <td><%= material.field %></td>
         <td><%= material.subject %></td>
-        <td><%= link_to 'Show', material %></td>
+        <td><%= material.developer.name %></td>
+        <td><%= link_to 'Show', admin_material_path(:id => material.id) %></td>
       </tr>
     <% end %>
   </tbody>

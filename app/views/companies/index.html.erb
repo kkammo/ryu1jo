@@ -1,4 +1,4 @@
-<h1>Listing companies</h1>
+<h1>회사 목록</h1>
 
 <table>
   <thead>
@@ -12,11 +12,15 @@
       <tr>
         <td><%= company.name %></td>
         <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_developer.admin %>
+          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'New Company', new_company_path %>
+<% if current_developer.admin %>
+  <%= link_to 'New Company', new_company_path, :class => "btn btn-primary" %>
+<% end %>

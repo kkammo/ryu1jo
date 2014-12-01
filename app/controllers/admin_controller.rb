@@ -7,7 +7,7 @@ class AdminController < ApplicationController
   end
 
   def evaluations
-  	@evaluations = Evaluation.all
+  	@evaluations = Evaluation.all.order('id ASC')
   end
 
   def evaluation
@@ -15,5 +15,14 @@ class AdminController < ApplicationController
     @applieds = @evaluation.applieds
     @mappings = @evaluation.mappings
   end
+
+  def materials
+    @materials = Material.all
+  end
   
+  def material
+    @material = Material.find(params[:id])
+    @results = Result.where(material_id: @material.id)
+  end
+
 end

@@ -2,16 +2,22 @@
   <table class="table table-condensed">
     <% @evaluations.each do |evaluation| %>
       <tr>
-        <td><%= link_to evaluation.id, admin_evaluation_path(:id => evaluation.id) %></td>
+        <td><%= link_to "#{evaluation.id}차 평가", admin_evaluation_path(:id => evaluation.id) %></td>
         <td></td>
       </tr>
     <% end %>
   </table>
 
-<div class="well well-sm pull-right">
+<!-- <div class="well well-sm pull-right">
 	<%= form_for :evaluation do |f| %>
        <p>
         	<%= f.submit 'NEW', :class=> 'btn btn-info'%>
        </p>
 	<% end %>
-</div>
+</div> -->
+
+
+
+<%= form_tag evaluations_path, :method => 'post', :role => 'create' do %>
+  <button type="submit" class="btn btn-info">NEW</button>
+<% end %>

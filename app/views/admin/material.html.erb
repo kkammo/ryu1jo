@@ -1,0 +1,45 @@
+<body>
+<p id="notice"><%= notice %></p>
+
+<div>
+	<h2>
+		<%= @material.subject %>
+	</h2>
+</div>
+
+<div>
+	<h4>
+		<%= @material.field %>
+	</h4>
+	<p>
+		<%= @material.created_at.strftime("%H:%M / %d %b. %Y") %>
+	</p>
+</div>
+
+<pre>
+	<text>
+		<%= @material.content %>
+	</text>
+</pre>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th colspan="3">
+        평가 결과 기록
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |result| %>
+      <tr style="background-color: ghostwhite">
+        <td><%= result.value %> <%= link_to 'Show', result %> <%= result.created_at.strftime("%H:%M / %d %b. %Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Back', admin_materials_path %>
+</body>

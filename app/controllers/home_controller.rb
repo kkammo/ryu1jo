@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	before_filter :require_sign_in
 	
 	# def index
 	# 	my_selecteds = Selected.where(developer_id: current_developer.id)

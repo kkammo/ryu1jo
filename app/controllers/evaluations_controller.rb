@@ -1,9 +1,9 @@
 class EvaluationsController < ApplicationController
   # before_filter :require_sign_in
-  # before_filter :require_admin, only: [:new, :create, :map]
+  # before_filter :require_admin, only: [:new, :create, :map, :close]
 
 	def index
-		@evaluations = Evaluation.all
+		@evaluations = Evaluation.all.order('id ASC')
 	end
 
 	def show
@@ -20,10 +20,28 @@ class EvaluationsController < ApplicationController
 
 		respond_to do |format|
       if @evaluation.save
-      	format.html { redirect_to evaluation_path(@evaluation), notice: 'created'}
+        if current_developer.admin
+          format.html { redirect_to admin_evaluation_path(:id => @evaluation.id), notice: 'created'}
+        else
+      	 format.html { redirect_to evaluation_path(@evaluation), notice: 'created'}
+        end
       else
         format.html{ render action: "new"}  
       end
+    end
+  end
+
+  def close
+    @evaluation = Evaluation.find(params[:id])
+    if @evaluation
+      @evaluation.processed = true
+      if @evaluation.save
+        redirect_to admin_evaluation_path(:id => @evaluation.id)
+      else
+        redirect_to admin_evaluation_path(:id => @evaluation.id)
+      end
+    else
+      admin_evaluations_path
     end
   end
 
@@ -182,7 +200,7 @@ class EvaluationsController < ApplicationController
       end
     end
   end
-    redirect_to root_path
+    redirect_to admin_evaluation_path(:id => @evaluation.id)
   end
 
   private
