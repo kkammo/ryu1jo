@@ -1,4 +1,4 @@
-Rclass ResultsController < ApplicationController
+class ResultsController < ApplicationController
   before_action :set_result, only: [:show]
   before_filter :require_sign_in
 
