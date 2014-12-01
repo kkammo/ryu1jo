@@ -21,7 +21,7 @@ Rclass ResultsController < ApplicationController
   def new
     @material = Material.find(params[:material_id])
 
-    if Evaluation.find(params[:evaluation_id]).precossed
+    if Evaluation.find(params[:evaluation_id]).processed
       redirect_to root_path, notice: '평가 가능 기간이 지났습니다.'
     end
 

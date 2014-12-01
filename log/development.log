@@ -43405,3 +43405,133 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 18:54:34
 
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 18:54:34 +0900
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 19:29:40 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-01 19:29:43 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (7.2ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 92ms (Views: 84.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 19:29:44 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (9.5ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 19:29:45 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 19:29:46 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/evaluations" for 127.0.0.1 at 2014-12-01 19:29:48 +0900
+Processing by AdminController#evaluations as HTML
+  [1m[36mEvaluation Load (0.3ms)[0m  [1mSELECT "evaluations".* FROM "evaluations"   ORDER BY id ASC[0m
+  Rendered admin/evaluations.html.erb within layouts/application (2.8ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/materials" for 127.0.0.1 at 2014-12-01 19:29:48 +0900
+Processing by AdminController#materials as HTML
+  [1m[36mMaterial Load (0.3ms)[0m  [1mSELECT "materials".* FROM "materials"[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2 LIMIT 1[0m
+  Rendered admin/materials.html.erb within layouts/application (3.6ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 19:29:50 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.3ms)
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/evaluation.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/career.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+Processing by HomeController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  "developers".* FROM "developers"  WHERE "developers"."id" = 2  ORDER BY "developers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "evaluations"  WHERE "evaluations"."appliable" = 'f' AND "evaluations"."processed" = 'f'
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 115ms (Views: 109.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/results/new?evaluation_id=1&material_id=1" for 127.0.0.1 at 2014-12-01 19:29:53 +0900
+
+SyntaxError (/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/results_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2014-12-01 19:29:54 +0900
+
+SyntaxError (/Users/moya/Documents/se/evalsystem/app/controllers/results_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/results_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/moya/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
