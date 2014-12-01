@@ -73,24 +73,29 @@ class EvaluationsController < ApplicationController
       if params[:rateemem] && params[:ratermem]
       if (params[:rateemem].to_i > 0) && (params[:ratermem].to_i > 0)
         num_of_appliers = @evaluation.applieds.count
+        num_of_selecteds = num_of_appliers/2
+        if num_of_appliers==1
+          num_of_selecteds+=1
+        end
+
 
         total_ratee_groups = num_of_appliers/params[:rateemem].to_i
-        total_rater_groups = (num_of_appliers/2)/params[:ratermem].to_i
+        total_rater_groups = num_of_selecteds/params[:ratermem].to_i
 
         if (num_of_appliers%params[:rateemem].to_i)!=0
           total_ratee_groups += 1
         end
 
-        if ((num_of_appliers/2)%params[:ratermem].to_i)!=0
+        if (num_of_selecteds%params[:ratermem].to_i)!=0
           total_rater_groups += 1
         end
+
 
         if total_ratee_groups < total_rater_groups
           redirect_to evaluation_path(@evaluation)
         end
 
-        selected_developers =
-          Developer.where(admin: false).order("RANDOM()").first(num_of_appliers/2)
+        selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
 
         selected_developers.each do |developer|
           @evaluation.selecteds.create(developer_id: developer.id)
@@ -122,7 +127,8 @@ class EvaluationsController < ApplicationController
           case_counter += 1
 
           applieds = @evaluation.applieds.order("RANDOM()").first(num_of_appliers)
-          selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_appliers/2)
+          selecteds = @evaluation.selecteds.order("RANDOM()").first(num_of_selecteds)
+         
           
           for i in 0..(applieds.count-1)
             applieds[i].ratee_group_id = rateegroups[i/params[:rateemem].to_i].id
@@ -138,7 +144,7 @@ class EvaluationsController < ApplicationController
             puts "#{loop_counter}"
             puts "======================"
 
-            if selecteds[dev_selector%(num_of_appliers/2)].rater_group_id != nil
+            if selecteds[dev_selector%num_of_selecteds].rater_group_id != nil
               dev_selector += 1
               next
             end
@@ -157,7 +163,7 @@ class EvaluationsController < ApplicationController
               end
               # mapped_ratee_dev = applieds.where(ratee_group_id: mapped_ratee_group[j].ratee_group_id)
               for k in 0..(mapped_ratee_dev.count-1)
-                if mapped_ratee_dev[k].developer_id == selecteds[dev_selector%(num_of_appliers/2)].developer_id
+                if mapped_ratee_dev[k].developer_id == selecteds[dev_selector%num_of_selecteds].developer_id
                   next_dev_flag = true
                 end
               end
@@ -168,7 +174,7 @@ class EvaluationsController < ApplicationController
               next
             end
 
-            selecteds[dev_selector%(num_of_appliers/2)].rater_group_id = ratergroups[group_selector%total_rater_groups].id
+            selecteds[dev_selector%num_of_selecteds].rater_group_id = ratergroups[group_selector%total_rater_groups].id
             dev_selector += 1
             group_selector += 1
 
@@ -179,7 +185,7 @@ class EvaluationsController < ApplicationController
                   finish_flag = false
               end          
             end
-          end while (finish_flag == false)&&(loop_counter <= ((num_of_appliers/2)*total_rater_groups))
+          end while (finish_flag == false)&&(loop_counter <= (num_of_selecteds*total_rater_groups))
 
         end while (finish_flag == false)&&(case_counter<5000)
 
@@ -200,11 +206,9 @@ class EvaluationsController < ApplicationController
           applieds[v].save
         end
 
-        @evaluation.appliable = false
-        @evaluation.save
+
       end
     end
-  end
     redirect_to admin_evaluation_path(:id => @evaluation.id)
   end
 
