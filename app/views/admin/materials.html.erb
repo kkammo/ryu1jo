@@ -4,7 +4,7 @@
 <div class="row" style="background-color: white;">
   <%= form_tag admin_materials_path, :method => 'get' do %>
       <div class="col-md-2">
-        <select class="form-control" id="field" name="field">
+        <select class="form-control" id="field" name="field" onChange="myFunction(this.options[this.selectedIndex].value)" >
           <option value="0"> web </option>
           <option value="1"> ios </option>
           <option value="2"> android </option>
