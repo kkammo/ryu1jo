@@ -79,6 +79,9 @@ class EvaluationsController < ApplicationController
             num_of_selecteds+=1
           end
 
+          rateemem = params[:rateemem].to_i
+          ratermem = params[:ratermem].to_i
+
           total_ratee_groups = num_of_appliers/params[:rateemem].to_i
           total_rater_groups = num_of_selecteds/params[:ratermem].to_i
 
@@ -125,11 +128,12 @@ class EvaluationsController < ApplicationController
           
           begin
             case_counter += 1
-
-            # select raters
-          
+            puts "======================"
+            puts "#{case_counter}"
+            puts "======================"
+           
+            # select raters        
             selected_developers = Developer.where(admin: false).order("RANDOM()").first(num_of_selecteds)
-
             selected_developers.each do |developer|
               @evaluation.selecteds.new(developer_id: developer.id)
             end
@@ -153,6 +157,11 @@ class EvaluationsController < ApplicationController
               puts "======================"
               puts "#{loop_counter}"
               puts "======================"
+
+              if @evaluation.selecteds.where(rater_group_id: group_selector%total_rater_groups).count >= ratermem
+                group_selector += 1
+                next
+              end
 
               if selecteds[dev_selector%num_of_selecteds].rater_group_id != nil
                 dev_selector += 1
@@ -202,8 +211,10 @@ class EvaluationsController < ApplicationController
 
           for l in 0..(selecteds.count-1)
             if selecteds[l].rater_group_id == nil
+              while @evaluation.selecteds.where(rater_group_id: group_selector%total_rater_groups).count >= ratermem
+                group_selector += 1                
+              end
               selecteds[l].rater_group_id = ratergroups[group_selector%total_rater_groups].id
-              group_selector += 1
             end          
           end
 
