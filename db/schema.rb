@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 20141130080409) do
     t.integer  "rater_id",                    null: false
     t.integer  "evaluation_id",               null: false
     t.integer  "material_id",                 null: false
+    t.string   "ratee_cname",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

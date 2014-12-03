@@ -8,6 +8,12 @@
 
 <div>
   <h4>
+    피평가자 아이디: <%= @result.ratee_id %>
+  </h4>
+</div>
+
+<div>
+  <h4>
     <%= @material.field %>
   </h4>
   <p>
@@ -20,6 +26,7 @@
     <%= @material.content %>
   </text>
 </pre>
+<h4> 평가 당시 피평가자의 회사: <%= @result.ratee_cname %> </h4>
 <br>
 <%= '---------------------------------------------' %>
 <br>

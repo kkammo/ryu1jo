@@ -6,6 +6,7 @@ class CreateResults < ActiveRecord::Migration
       t.integer :rater_id, index: true, null: false
       t.references :evaluation, index: true, null: false
       t.references :material, null: false
+      t.string :ratee_cname, null: false
 
       t.timestamps
     end

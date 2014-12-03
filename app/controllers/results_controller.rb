@@ -39,6 +39,7 @@ class ResultsController < ApplicationController
     @material = Material.find(params[:result][:material_id])
     @result = Result.new(result_params)
     @result.value *= @material.prate
+    @result.ratee_cname = Developer.find(params[:result][:ratee_id]).cname
 
     respond_to do |format|
       if @result.save

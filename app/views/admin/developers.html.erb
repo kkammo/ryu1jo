@@ -2,13 +2,66 @@
   <div id="page-wrap" >
 		<h2> 개발자 관리 </h2>
     <br>
+    <div >
+  <label>개발자 통계 검색</label>
 
+  <%= form_tag admin_developer_path, :method => 'get', :role => 'developer' do %>
+    <div class="row" style="background-color: white">
+      <div class="col-md-2">
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: '개발자 이메일 입력' %>
+      </div>
+      <div class="col-md-2">
+        <select class="form-control" id="format" name="format">
+          <option value="1"> 이직 및 소속 변경 내역 </option>
+          <option value="2"> 평가 자료 업로드 내역 </option>
+          <option value="3"> 피평가 내역 </option>
+          <option value="4"> 평가 내역 </option>
+          <option value="5"> 평가 신청 내역 </option>
+          <option value="6"> 평가자 선정 기록 </option>
+        </select>
+      </div>
+        <div class="radio; col-md-6" style="text-align: center">
+          <label style="padding-right: 20px">
+            <input type="radio" name="period" id="period" value="today" checked>
+            당일
+          </label>
+          <label style="padding-right: 20px">
+            <input type="radio" name="period" id="period" value="7days">
+            최근 7일
+          </label>
+          <label style="padding-right: 20px">
+            <input type="radio" name="period" id="period" value="period">
+            기간
+          </label>
+          <br>
+          <label>
+            <%= date_select :begin, class: 'form-control' %>
+          </label>
+           ~~ 
+          <label>
+            <%= date_select :end, class: 'form-control' %>
+          </label>
+        </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-info pull-left">
+          검색
+        </button>
+      </div>
+    </div>
+  <% end %>
+</div>
+    <br>
+     개발자 목록
+    <br>
 		<table class="table table-condensed">
      	<thead>
    	   	<tr>
      	   	<th colspan="3">
             이름
      	   	</th>
+          <th colspan="3">
+            이메일
+          </th>
           <th colspan="3">
             회사
           </th>
@@ -24,6 +77,9 @@
   	       	<td colspan="3">
   	       		<%= developer.name %>
   	       	</td>
+            <td colspan="3">
+              <%= developer.email %>
+            </td>
             <td colspan="3">
               <%= developer.cname %>
             </td>

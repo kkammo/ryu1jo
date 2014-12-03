@@ -6,7 +6,7 @@
         <%= devise_error_messages! %>
 
         <div class="field">
-          <%= f.label :email %><br />
+          <%= 'e-메일' %><br />
           <%= f.email_field :email, autofocus: true %>
         </div>
 
@@ -15,7 +15,7 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= '비밀번호 입력' %> <i>(변경을 원하지 않으면 비워두세요.)</i><br />
           <%= f.password_field :password, autocomplete: "off" %>
         </div>
 

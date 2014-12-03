@@ -5,16 +5,10 @@ class Company < ActiveRecord::Base
 
 	public
 		def get_avg(evaluation_id)
-			evaluation = Evaluation.find(evaluation_id)
-			employees = self.developers
-
-			results = []
-			for i in 0..employees.count-1
-				results += Result.where(evaluation_id: evaluation_id, ratee_id: employees[i].id)
-			end
+			results = Result.where(evaluation_id: evaluation_id, ratee_cname: self.name)
 
 			if results.count > 0
-				results.sum(&:value)/results.count
+				results.sum(:value)/results.count
 			else
 				0
 			end

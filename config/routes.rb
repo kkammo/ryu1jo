@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admin#index'
   get 'admin/developers' => 'admin#developers'
+  get 'admin/developer' => 'admin#developer'
   get 'admin/evaluations' => 'admin#evaluations'
   get 'admin/evaluation' => 'admin#evaluation', param: :id
   get 'admin/materials' => 'admin#materials'
