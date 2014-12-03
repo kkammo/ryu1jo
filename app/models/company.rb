@@ -14,4 +14,31 @@ class Company < ActiveRecord::Base
 			end
 		end
 
+		def get_field_avg(field)
+			results = Result.where(ratee_cname: self.name)
+			#whole
+			if field == "all"
+				if results.count > 0
+					results.sum(:value)/results.count
+				else
+					0
+				end
+			#part
+			else
+				sum = 0
+
+				results.each do |result|
+					if result.material.field == field
+						sum += result.value
+					end
+				end
+
+				if results.count > 0
+					sum/results.count
+				else
+					0
+				end
+			end
+		end
+
 end

@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   
   resources :companies, param: :name do
     resources :departments, param: :dname_cname
+    get 'sort', on: :collection
   end
 
   resources :career, only: [:index]

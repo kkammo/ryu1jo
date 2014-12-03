@@ -5,7 +5,11 @@ class CompaniesController < ApplicationController
 
   # GET /companies
   def index
-    @companies = Company.all
+    if params[:field]
+      @companies = Company.all.sort_by {|company| company.get_field_avg(params[:field]) }.reverse
+    else
+      @companies = Company.all
+    end
   end
 
   # GET /companies/1
@@ -41,6 +45,10 @@ class CompaniesController < ApplicationController
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def sort
+    redirect_to companies_path(:field => params[:field])
   end
 
   private

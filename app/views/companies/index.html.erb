@@ -1,20 +1,57 @@
-<h1>회사 목록</h1>
+<%= form_tag sort_companies_path, :method => 'get', :role => 'sort' do %>
+<div class="radio;">
+  <font size="10px">회사 목록</font>
+  <label style="padding-right: 20px; padding-left: 60px">
+    <input type="radio" name="field" id="field" value="all" onclick = "this.form.submit()">
+    all
+  </label>
+  <label style="padding-right: 20px;">
+    <input type="radio" name="field" id="field" value="web" onclick = "this.form.submit()">
+    web
+  </label>
+  <label style="padding-right: 20px">
+    <input type="radio" name="field" id="field" value="ios" onclick = "this.form.submit()">
+    ios
+  </label>
+  <label style="padding-right: 20px">
+    <input type="radio" name="field" id="field" value="android" onclick = "this.form.submit()">
+    android
+  </label>
+  <label style="padding-right: 20px">
+    <input type="radio" name="field" id="field" value="windows" onclick = "this.form.submit()">
+    windows
+  </label>
+  <label style="padding-right: 20px">
+    <input type="radio" name="field" id="field" value="embeded" onclick = "this.form.submit()">
+    embeded
+  </label>
+</div>
+
+<% end %>
+
 
 <table class="table table-condensed">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th colspan="3">이름</th>
+      <th colspan="7">가치</th>
+      <th colspan="2"> </th>
     </tr>
   </thead>
 
   <tbody>
     <% @companies.each do |company| %>
       <tr style="background-color: ghostwhite">
-        <td><%= company.name %></td>
-        <td><%= link_to 'Show', company %></td>
+        <td colspan="3"><%= company.name %></td>
+        <td colspan="7"><%= company.get_field_avg(params[:field]) %></td>
+        <td colspan="2">
+        <%= link_to 'Show', company %>
         <% if current_developer.admin %>
-          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          / <%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            
         <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
