@@ -26,15 +26,17 @@ class Company < ActiveRecord::Base
 			#part
 			else
 				sum = 0
+				cnt = 0
 
 				results.each do |result|
 					if result.material.field == field
 						sum += result.value
+						cnt++
 					end
 				end
 
-				if results.count > 0
-					sum/results.count
+				if cnt > 0
+					sum/cnt
 				else
 					0
 				end
