@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 
   get 'careers/change_company' => 'career#change_company'
   get 'careers/change_department' => 'career#change_department'
+  get 'careers/change_field' => 'career#change_field'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

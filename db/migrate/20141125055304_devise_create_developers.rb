@@ -35,6 +35,7 @@ class DeviseCreateDevelopers < ActiveRecord::Migration
       t.string :dname
 
       t.boolean :admin, null: false, default: false
+      t.integer :field, null: false
 
       t.timestamps
     end

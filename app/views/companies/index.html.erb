@@ -1,3 +1,6 @@
+<% if notice %>
+<p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
 <%= form_tag sort_companies_path, :method => 'get', :role => 'sort' do %>
 <div class="radio;">
   <font size="10px" style="padding-right: 40px">회사 목록</font>

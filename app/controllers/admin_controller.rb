@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  before_filter :require_admin
+
   def index
   end
 
@@ -14,7 +16,7 @@ class AdminController < ApplicationController
     
     unless developer
       redirect_to admin_developers_path
-
+      return
     else
 
     case params[:format]

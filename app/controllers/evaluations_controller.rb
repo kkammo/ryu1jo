@@ -42,6 +42,7 @@ class EvaluationsController < ApplicationController
 	def new
     if Evaluation.where(appliable: true).count > 0
       redirect_to admin_evaluations_path, notice: '평가 생성 실패. 현재 진행중인 평가가 존재합니다.'
+      return
     end
 		@evaluation = Evaluation.new
 	end

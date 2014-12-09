@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20141130080409) do
     t.string   "cname",                  default: "freelancer", null: false
     t.string   "dname"
     t.boolean  "admin",                  default: false,        null: false
+    t.integer  "field",                                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

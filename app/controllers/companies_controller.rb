@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :destroy]
-  # before_filter :require_sign_in
-  # before_filter :require_admin, only: [:new, :create, :map]
+  before_filter :require_sign_in
+  before_filter :require_admin, only: [:new, :create]
 
   # GET /companies
   def index
@@ -40,6 +40,10 @@ class CompaniesController < ApplicationController
 
   # DELETE /companies/1
   def destroy
+    if @company.name == "freelancer"
+      redirect_to companies_url, notice: '이 회사는 삭제할 수 없습니다.'
+      return
+    end
     @company.destroy
     respond_to do |format|
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }

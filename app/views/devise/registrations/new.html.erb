@@ -36,8 +36,43 @@
     <%= f.text_field :dname %>
   </div>
 
+  <div class="form-group">
+    <label for="user_field">
+      <p>전문분야</p>
+    </label>
+
+    <div>
+      <div class="radio">
+        <label style="padding-right: 20px">
+          <input type="radio" name="user[field]" id="user_field" value="web" checked>
+          web
+        </label>
+          
+        <label style="padding-right: 20px">
+          <input type="radio" name="user[field]" id="user_field" value="ios">
+          ios
+        </label>
+
+        <label style="padding-right: 20px">
+          <input type="radio" name="user[field]" id="user_field" value="android">
+          android
+        </label>
+
+        <label style="padding-right: 20px">
+          <input type="radio" name="user[field]" id="user_field" value="windows">
+          windows
+        </label>
+
+        <label>
+          <input type="radio" name="user[field]" id="user_field" value="embeded">
+          embeded
+        </label>
+      </div>
+    </div>
+  </div>
+  <br>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "가입하기" %>
   </div>
 <% end %>
 

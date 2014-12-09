@@ -87,6 +87,7 @@ class CareerController < ApplicationController
 		if Company.where(name: params[:new_company].to_s).count > 0
 			if @developer.cname == params[:new_company].to_s
 				redirect_to edit_developer_registration_path(@developer), notice: '현재 회사와 동일합니다.'
+				return
 			end
 			@career = @developer.careers.new(prev: @developer.cname, current: params[:new_company])
 			@career.save
@@ -104,6 +105,7 @@ class CareerController < ApplicationController
 		if Department.where(dname: params[:new_department].to_s, cname: @developer.cname).count > 0
 			if @developer.dname == params[:new_department].to_s
 				redirect_to edit_developer_registration_path(@developer), notice: '현재 회사와 동일합니다.'
+				return
 			end
 
 			@career = @developer.careers.new(prev: @developer.dname, current: params[:new_department])
@@ -111,9 +113,30 @@ class CareerController < ApplicationController
 			@developer.dname = params[:new_department]
 			@developer.save
 			redirect_to edit_developer_registration_path(@developer), notice: '수정되었습니다.'
+			return
 		else
 			redirect_to edit_developer_registration_path(@developer), notice: '부서가 존재하지 않습니다.'
+			return
 		end	
+	end
+
+	def change_field
+		@developer = Developer.find(params[:developer_id])
+
+		if params[:field].length > 0
+			if @developer.field == params[:field].to_s
+				redirect_to edit_developer_registration_path(@developer), notice: '현재 전문 분야와 동일합니다.'
+				return
+			end
+
+			@career = @developer.careers.new(prev: @developer.field, current: params[:field])
+			@career.save
+			@developer.field = params[:field]
+			@developer.save
+			redirect_to edit_developer_registration_path(@developer), notice: '수정되었습니다.'
+		else
+			redirect_to edit_developer_registration_path(@developer), notice: '전문 분야가 존재하지 않습니다.'
+		end
 	end
 
 end

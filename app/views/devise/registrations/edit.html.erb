@@ -1,3 +1,6 @@
+<% if notice %>
+<p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
 <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
 <h2>내 정보</h2>
   <div class="row" style="background-color: white">
@@ -30,26 +33,33 @@
         </div>
 
         <div class="field">
-          <%= f.label :name %><br />
+          <%= f.label :이름 %><br />
           <%= f.text_field :name %>
         </div>
 
         <div class="field">
-          <%= f.label :cname %><br />
+          <%= f.label "회사 이름" %><br />
           <text style="border-width:3px; border-style:solid; border-color: skyblue; auto; padding:0px;">
             <%= current_developer.cname %>
           </text>
         </div>
 
         <div class="field">
-          <%= f.label :dname %><br />
+          <%= f.label "부서 이름" %><br />
           <text style="border-width:3px; border-style:solid; border-color: skyblue; auto; padding:0px;" >
             <%= current_developer.dname %>
           </text>
         </div>
 
+        <div class="field">
+          <%= f.label "전문 분야" %><br />
+          <text style="border-width:3px; border-style:solid; border-color: skyblue; auto; padding:0px;" >
+            <%= current_developer.field %>
+          </text>
+        </div>
+        <br>
         <div class="actions">
-          <%= f.submit "Update" %>
+          <%= f.submit "업데이트" %>
         </div>
       <% end %>
     </div>
@@ -76,6 +86,41 @@
           수정하기
         </button>
       <% end %>
+
+      <%= form_tag careers_change_field_path(current_developer), :method => 'get', :role => 'change_field'  do %>
+        <div>
+          전문 분야 변경
+          
+        </div>
+        <%= hidden_field_tag :developer_id, current_developer.id %>
+        
+          <div class="radio;">
+            <label style="padding-right: 20px;">
+              <input type="radio" name="field" id="field" value="web">
+              web
+            </label>
+            <label style="padding-right: 20px">
+              <input type="radio" name="field" id="field" value="ios">
+              ios
+            </label>
+            <label style="padding-right: 20px">
+              <input type="radio" name="field" id="field" value="android">
+              android
+            </label>
+            <label style="padding-right: 20px">
+              <input type="radio" name="field" id="field" value="windows">
+              windows
+            </label>
+            <label style="padding-right: 20px">
+              <input type="radio" name="field" id="field" value="embeded">
+              embeded
+            </label>
+          </div>
+        <button type="submit" class="btn btn-warning btn-xs">
+          변경 하기
+        </button>
+      <% end %>
+
       <br>
       <h3> 통계 </h3>
       <div>
@@ -89,8 +134,9 @@
     </div>
   </div>
 
-<h3>Cancel my account</h3>
+<!-- <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+<br>
+<br>
 <%= link_to "Back", :back %>

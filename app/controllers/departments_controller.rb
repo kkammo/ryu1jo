@@ -1,7 +1,7 @@
 class DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :destroy]
-  # before_filter :require_sign_in
-  # before_filter :require_admin, only: [:new, :create, :map]
+  before_filter :require_sign_in
+  before_filter :require_admin, only: [:new, :create]
 
   # GET /companies/#/departments
   def index

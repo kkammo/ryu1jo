@@ -12,10 +12,10 @@ c1 = Company.create! :name => "freelancer"
 # user = User.create! :student_id => '001234', :user_name => 'admin', :email => 'admin@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :permit => true, :role => 'admin'
 puts 'New user created: ' << c1.name
 
-admin = Developer.create! :email => 'admin@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "관리자", :admin => true
+admin = Developer.create! :email => 'admin@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "관리자", :admin => true, :field => 0
 
-u1 = Developer.create! :email => 'student1@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이1"
-u2 = Developer.create! :email => 'student2@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이2"
+u1 = Developer.create! :email => 'student1@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이1", :field => 0
+u2 = Developer.create! :email => 'student2@ex.com', :password => 'zx001234', :password_confirmation => 'zx001234', :cname => c1.name, :name => "개똥이2", :field => 0
 
 e = Evaluation.create! :appliable => false
 

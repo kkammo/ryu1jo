@@ -31,7 +31,7 @@ class Company < ActiveRecord::Base
 				results.each do |result|
 					if result.material.field == field
 						sum += result.value
-						cnt++
+						cnt += 1
 					end
 				end
 
