@@ -1,7 +1,8 @@
 <%= form_tag sort_companies_path, :method => 'get', :role => 'sort' do %>
 <div class="radio;">
-  <font size="10px">회사 목록</font>
-  <label style="padding-right: 20px; padding-left: 60px">
+  <font size="10px" style="padding-right: 40px">회사 목록</font>
+  <span class="label label-default" style="">정렬</span>
+  <label style="padding-right: 20px; padding-left: 20px">
     <input type="radio" name="field" id="field" value="all" onclick = "this.form.submit()">
     all
   </label>
@@ -34,7 +35,7 @@
   <thead>
     <tr>
       <th colspan="3">이름</th>
-      <th colspan="7">가치</th>
+      <th colspan="7"><%= params[:field] %>분야의 가치</th>
       <th colspan="2"> </th>
     </tr>
   </thead>

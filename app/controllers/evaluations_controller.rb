@@ -102,7 +102,7 @@ class EvaluationsController < ApplicationController
           num_of_selecteds = num_of_appliers/2
           
           if num_of_appliers==1
-            num_of_selecteds+=1
+            num_of_selecteds=1
           end
 
           rateemem = params[:rateemem].to_i
