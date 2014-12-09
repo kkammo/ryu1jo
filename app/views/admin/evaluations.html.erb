@@ -1,3 +1,8 @@
+<% if notice %>
+  <div class="alert alert-danger">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
   <h2>평가 목록</h2>
   <table class="table table-condensed">
     <% @evaluations.each do |evaluation| %>

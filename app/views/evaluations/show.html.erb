@@ -51,7 +51,23 @@
 	<div class="col-md-6" style="padding:10px">
 		<h3> 평가자 메뉴 </h3>
 		<% if @selected %>
-			
+			<table class="table table-condensed">
+  			<thead>
+    			<tr>
+      			<th colspan="3"></th>
+    			</tr>
+  			</thead>
+
+  			<tbody>
+    			<% @jobs.each do |job| %>
+      			<tr style="background-color: ghostwhite">
+        			<td>
+          			<%= job.subject %> <%= link_to '평가하기', new_result_path(:material_id => job.id, :evaluation_id => @evaluation.id) %>
+        			</td>
+      			</tr>
+    			<% end %>
+  			</tbody>
+			</table>
 		<% else %>
 			평가자로 선정되지 않았습니다.
 		<% end %>

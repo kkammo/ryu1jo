@@ -1,6 +1,7 @@
 class EvaluationsController < ApplicationController
-  # before_filter :require_sign_in
-  # before_filter :require_admin, only: [:new, :create, :map, :close]
+  before_filter :require_sign_in
+  before_filter :require_admin, only: [:new, :create, :map, :close]
+  before_filter :constraint_creation, only: [:new, :create]
 
 	def index
 		@evaluations = Evaluation.all.order('id ASC')
@@ -11,12 +12,37 @@ class EvaluationsController < ApplicationController
     @mappings = @evaluation.mappings
     @selected = Selected.where(evaluation_id: @evaluation.id, developer_id: current_developer.id)[0]
     if @selected
-      @rater_group = @selected.rater_group
-      @mapped_groups = @rater_group.mappings
+      rater_group = @selected.rater_group
+      mappings = rater_group.mappings
+
+      ratees = []
+      mappings.each do |mapping|
+        mapping.ratee_group.applieds.each do |a|
+          ratees << a.developer
+        end
+      end
+
+      @jobs = []
+      ratees.each do |ratee|
+        @jobs += ratee.materials
+      end
+
+      completed_jobs = []
+      @jobs.each do |j|
+        if j.result
+          completed_jobs << j
+        end
+      end
+
+      @jobs = @jobs - completed_jobs
+
     end
 	end
 
 	def new
+    if Evaluation.where(appliable: true).count > 0
+      redirect_to admin_evaluations_path, notice: '평가 생성 실패. 현재 진행중인 평가가 존재합니다.'
+    end
 		@evaluation = Evaluation.new
 	end
 
@@ -242,6 +268,12 @@ class EvaluationsController < ApplicationController
   private
   def set_map_params
 
+  end
+
+  def constraint_creation
+    if Evaluation.where(appliable: true).count > 0
+      redirect_to admin_evaluations_path, notice: '평가 생성 실패. 현재 진행중인 평가가 존재합니다.'
+    end
   end
 
 end
