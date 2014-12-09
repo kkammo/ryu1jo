@@ -99,6 +99,17 @@ class EvaluationsController < ApplicationController
     if @evaluation.appliable && (@evaluation.processed==false)
       if params[:rateemem] && params[:ratermem]
         if (params[:rateemem].to_i > 0) && (params[:ratermem].to_i > 0)
+          
+          # Constraint
+          if params[:rateemem].to_i > @evaluation.applieds.count
+            redirect_to evaluation_path(@evaluation), notice: '입력값이 잘못 되었습니다.'
+            return
+          end
+          if params[:ratermem].to_i > @evaluation.applieds.count/2
+            redirect_to evaluation_path(@evaluation), notice: '입력값이 잘못 되었습니다.'
+            return
+          end
+
           num_of_appliers = @evaluation.applieds.count
           num_of_selecteds = num_of_appliers/2
           
