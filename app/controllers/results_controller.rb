@@ -38,6 +38,10 @@ class ResultsController < ApplicationController
   # POST /results
   def create
     @material = Material.find(params[:result][:material_id])
+    if @material.developer_id == current_developer.id
+      redirect_to root_path, notice: '자신의 자료는 평가할 수 없습니다.'
+      return
+    end
     @result = Result.new(result_params)
     @result.value *= @material.prate
     @result.ratee_cname = Developer.find(params[:result][:ratee_id]).cname
