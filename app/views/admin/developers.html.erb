@@ -69,6 +69,9 @@
             부서
           </th>
           <th colspan="1">
+            전문 분야
+          </th>
+          <th colspan="1">
             평가 자료 수
           </th>
           <th colspan="1">
@@ -100,6 +103,9 @@
               <% unless developer.dname %>
                 x
               <% end %>
+            </td>
+            <td colspan="1">
+              <%= developer.field %>
             </td>
             <td colspan="1">
               <%= Result.where(rater_id: developer.id).count %>
